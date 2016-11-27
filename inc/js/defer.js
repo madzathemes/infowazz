@@ -129,7 +129,6 @@ jQuery(document).ready(function() {
       body.removeClass("fix-menu");
 		}
     return false;
-
 	});
 
   jQuery('.footer-scroll-to-top, .footer-scroll-to-top-link').click(function(){
