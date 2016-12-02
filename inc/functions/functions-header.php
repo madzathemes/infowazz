@@ -26,7 +26,7 @@ else if(!empty($option['menu_background_width'])) {
 }
 ?>
 
-<?php boomnews_header_fixed(); ?>
+<?php	if(!empty( $option['menu_share'])){	boomnews_header_fixed();	} ?>
 
 <?php if  (!empty($optioz['header_ad_top'])) {  ?>
 	<div class="mt-t-ad">

@@ -1438,13 +1438,15 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 .hover-menu .mobile ul a {
   font-size: 18px;
 }
-.nav-up.fix-menu .header-wrap {
+.mt-fixed-up.nav-up.fix-menu .header-wrap,
+.mt-fixed-disabled.fixed-on .header-wrap {
   transform: translate(0,-107px);
   -webkit-transform: translate(0,-107px); /** Safari & Chrome **/
   -o-transform: translate(0,-107px); /** Opera **/
   -moz-transform: translate(0,-107px); /** Firefox **/
 }
-.nav-down.fix-menu .header-wrap {
+.mt-fixed-up.nav-down .header-wrap,
+.mt-fixed-always.fixed-on .header-wrap{
   transform: translate(0,-47px);
   -webkit-transform: translate(0,-47px); /** Safari & Chrome **/
   -o-transform: translate(0,-47px); /** Opera **/
@@ -1481,7 +1483,8 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   -o-transform: translate(0,0); /** Opera **/
   -moz-transform: translate(0,0); /** Firefox **/
 }
-.nav-down.fixed-on .fixed-top {
+.mt-fixed-up.nav-down.fixed-on .fixed-top,
+.mt-fixed-always.fixed-on .fixed-top  {
   transform: translate(0,60px);
   -webkit-transform: translate(0,60px); /** Safari & Chrome **/
   -o-transform: translate(0,60px); /** Opera **/
@@ -3342,6 +3345,9 @@ opacity: 0.7
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.boxed-layout-on .mt-content-container .row .col-md-12 > div {
+  overflow: hidden;
+}
 .page .mt-content-container {
   padding-top: 0px;
 }
@@ -3566,17 +3572,17 @@ opacity: 0.7
 
 @media (min-width: 1440px) {
   .boxed-layout-on .mt-outer-wrap{
-    width: 1440px;
+    width: 1340px;
   }
 
   .boxed-layout-on .poster-carousel {
-    width: 1390px;
+    width: 1290px;
   }
 }
 
 @media (min-width: 1460px) {
   .boxed-layout-on .mt-outer-wrap{
-    width: 1460px;
+    width: 1360px;
   }
 }
 
@@ -3758,6 +3764,7 @@ opacity: 0.7
   .size-350 .poster-image {
     float: none !important;
     margin-right: 0px !important;
+    width: 100% !important;
   }
   .poster .poster-content {
     padding-top: 0px !important;
@@ -3927,7 +3934,7 @@ opacity: 0.7
   .grid-post {
     width: 100% !important;
     height: 150px !important;
-    margin:0px !important;
+    margin: 0px !important;
   }
   .grid-post img {
     width: 100% !important;
