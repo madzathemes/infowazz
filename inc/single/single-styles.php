@@ -21,8 +21,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="col-md-4 pull-right <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
@@ -35,19 +33,16 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-        <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <?php boomnews_single_media(); ?>
+        <?php boomnews_single_cat(); ?>
         <?php boomnews_single_title(); ?>
         <?php boomnews_single_social(); ?>
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -59,18 +54,14 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
         <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
-
         <?php boomnews_single_title(); ?>
         <?php boomnews_single_social(); ?>
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -87,18 +78,15 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-        <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
 
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
+        <?php boomnews_single_cat(); ?>
         <?php boomnews_single_title(); ?>
         <?php boomnews_single_social(); ?>
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -110,6 +98,7 @@
   <div class="container">
     <div class="row">
       <div class="single-content col-md-12">
+        <?php boomnews_single_cat(); ?>
         <?php boomnews_single_title(); ?>
       </div>
     </div>
@@ -119,17 +108,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-        <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
+
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <?php boomnews_single_social(); ?>
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -159,16 +145,12 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-        <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -186,7 +168,8 @@
     			<div class="single-media-title">
             <div class="container">
               <div class="row">
-        				<div class="col-md-9">
+        				<div class="col-md-10">
+                  <?php boomnews_single_cat(); ?>
         		      <?php boomnews_single_title(); ?>
         				</div>
         				<div class="col-md-12">
@@ -203,15 +186,11 @@
   <div class="post-content-wrap mt-content-container">
     <div class="container">
       <div class="row">
-        <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-          <?php boomnews_single_cat(); ?>
-          <?php boomnews_single_cat_posts(); ?>
-        </div>
-        <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
+        <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
           <div class="entry-content"><?php the_content(); ?></div>
           <?php boomnews_single_bottom(); ?>
         </div>
-        <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+        <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
           <?php boomnews_single_sidebar(); ?>
         </div>
       </div>
@@ -225,7 +204,7 @@
     </div>
     	<div class="single-media-top single-image-gradient">
   			<div class="single-media-title">
-  				<div class="col-md-9">
+  				<div class="col-md-10">
   					<?php boomnews_single_cat(); ?>
   		      <?php boomnews_single_title(); ?>
   				</div>
@@ -238,16 +217,12 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-col-1 col-md-1 sidebar theiaStickySidebar">
-        <?php boomnews_single_cat(); ?>
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-col-2 col-md-7 <?php echo sanitize_html_class($fl); ?>">
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <div class="entry-content"><?php the_content(); ?></div>
         <?php boomnews_single_bottom(); ?>
       </div>
-      <div class="col-col-3 col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
@@ -259,7 +234,7 @@
 	<?php  if ( has_post_thumbnail() )  { ?>
   	<div class="single-media-top single-image-gradient">
 			<div class="single-media-title">
-				<div class="col-md-9">
+				<div class="col-md-10">
 					<?php boomnews_single_cat(); ?>
 		      <?php boomnews_single_title(); ?>
 				</div>
