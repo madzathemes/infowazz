@@ -3,10 +3,8 @@
 <div class="post-content-wrap mt-content-container">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 pull-right sidebar theiaStickySidebar">
-        <?php boomnews_single_cat_posts(); ?>
-      </div>
-      <div class="single-content col-md-7 <?php echo sanitize_html_class($fl); ?>">
+
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <div class="row">
           <div class="col-md-12">
@@ -25,7 +23,7 @@
       </div>
 
 
-      <div class="col-md-3 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
         <?php boomnews_single_sidebar(); ?>
       </div>
     </div>
