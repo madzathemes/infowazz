@@ -1445,7 +1445,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   -o-transform: translate(0,-107px); /** Opera **/
   -moz-transform: translate(0,-107px); /** Firefox **/
 }
-.mt-fixed-up.nav-down .header-wrap,
+.mt-fixed-up.nav-down.fixed-on .header-wrap,
 .mt-fixed-always.fixed-on .header-wrap{
   transform: translate(0,-47px);
   -webkit-transform: translate(0,-47px); /** Safari & Chrome **/
