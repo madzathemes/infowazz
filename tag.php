@@ -1,8 +1,11 @@
 <?php get_header();
 
+$tag_title = single_tag_title("", false);
+
 $tag_obj = get_query_var('tag_id');
 $tag_array = get_tag($tag_obj);
 $tag_slug = $tag_array->slug;
+
 ?>
 <div class="mt-container-wrap">
 <div class="container mt-content-container">
@@ -12,7 +15,7 @@ $tag_slug = $tag_array->slug;
 
 				<?php if ( have_posts() ) : ?>
 
-					<?php echo do_shortcode('[posts pagination=on title="'. esc_html__( 'Tag','boomnews' ) .': '.esc_attr($tag_slug).'" title_type="left" tag="'.esc_attr($tag_slug).'" type=normal-right]');?>
+					<?php echo do_shortcode('[posts pagination=on title="'. esc_html__( 'Tag','boomnews' ) .': '.esc_attr($tag_title).'" title_type="left" tag="'.esc_attr($tag_slug).'" type=normal-right]');?>
 
 				<?php else : ?>
 
