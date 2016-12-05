@@ -103,3 +103,44 @@
   <?php } ?>
   <?php
 } add_filter('boomnews_footer_2','boomnews_footer_2'); ?>
+
+<?php function boomnews_footer_3() {?>
+  <?php $option = get_option("boomnews_theme_options"); ?>
+  <?php if  (!empty($option['footer_top'])) {  ?>
+    <?php if  ($option['footer_top'] == '1') {  ?>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-logo">
+              <?php if(!empty($option['footer_logo'])) { ?>
+                <img src="<?php echo esc_url($option['footer_logo']); ?>" srcset="<?php echo esc_url($option['footer_logo']); ?> 1x, <?php echo esc_url($option['footer_logox2']); ?> 2x"  alt="<?php echo the_title(); ?>"  />
+              <?php } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/inc/img/logo.png" alt="<?php echo the_title(); ?>" />
+              <?php } ?>
+            </div>
+            <div class="col-md-6 footer-social">
+              <?php boomnews_socials(); ?>
+              </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+  <?php } ?>
+  <?php if  (!empty($option['footer_bottom'])) { ?>
+    <?php if  ($option['footer_bottom'] == '1') { ?>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-copyright">
+              <p><?php echo html_entity_decode(get_theme_mod('boomnews_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+            </div>
+              <div class="col-md-6">
+                <?php wp_nav_menu( array('theme_location'  => "footer_menu", 'container' =>false, 'fallback_cb' => false, 'menu_class' => 'footer-nav', 'menu_id' => '','echo' => true, 'before' => '','after' => '', 'link_before' => '','link_after' => '', 'depth' => 1));  ?>
+              </div>
+            </div>
+        </div>
+      </div>
+    <?php } ?>
+  <?php } ?>
+  <?php
+} add_filter('boomnews_footer_3','boomnews_footer_3'); ?>

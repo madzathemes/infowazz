@@ -43,8 +43,9 @@ if(!empty($style)){
 
 <div class="mt-smart-menu">
 	<span class="close pointer"></span>
-	<?php boomnews_socials(); ?>
+	<?php boomnews_logo(); ?>
 	<?php boomnews_nav_mobile(); ?>
+	<?php boomnews_socials(); ?>
 </div>
 
 

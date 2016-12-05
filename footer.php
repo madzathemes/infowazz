@@ -1,7 +1,4 @@
 <div class="footer-wrap">
-		<div class="container">
-			<?php if ( shortcode_exists( 'posts_trending' ) ) { echo do_shortcode('[posts_trending type=trending-carousel title="hot posts" title_type=left item_nr=5]'); } ?>
-		</div>
 		<?php $optionz = get_option("magazin_theme_options");
 		if (!empty($optionz['article_ad_bottom'])) {  ?>
 			<div class="advertise text-center">
@@ -19,7 +16,7 @@
 	<?php } ?>
 	<?php if(!empty($option['footer_top']) or !empty($option['footer_bottom'])){ ?>
 		<div class="footer">
-			<?php boomnews_footer_2(); ?>
+			<?php boomnews_footer_3(); ?>
 		</div>
 	<?php } ?>
 	</div>

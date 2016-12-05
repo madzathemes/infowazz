@@ -45,7 +45,7 @@ else if(!empty($option['menu_background_width'])) {
 							<?php boomnews_socials(); ?>
 						</div>
 						<div class="mt-top-followers pull-left mt-top-share">
-							<strong>15k</strong> <span>Followers</span>
+							<strong>15k</strong> <span><?php esc_html_e( 'Followers', 'boomnews' ); ?></span>
 						</div>
 						<div class="pull-right mt-top-menu">
 							<?php boomnews_top_menu(); ?>
@@ -83,10 +83,10 @@ else if(!empty($option['menu_background_width'])) {
 									</form>
 								</div>
 							</div>
+							<div class="search-close"></div>
 						<?php } } ?>
 					</div>
 				</div>
-				<div class="search-close"></div>
 			</div>
 		</div>
 	</div>

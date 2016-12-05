@@ -96,11 +96,13 @@ function boomnews_after_import_setup() {
     // Assign menus to their locations.
     $main_menu = get_term_by( 'name', 'Header', 'nav_menu' );
 		$mobile_menu = get_term_by( 'name', 'Mobile Menu', 'nav_menu' );
+		$top_menu = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
 		$footer_menu = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
 
     set_theme_mod( 'nav_menu_locations', array(
             'primary' => $main_menu->term_id,
 						'mobile' => $mobile_menu->term_id,
+						'top_menu' => $top_menu->term_id,
 						'footer_menu' => $footer_menu->term_id,
         )
     );
