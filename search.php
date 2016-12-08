@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <div class="mt-container-wrap">
-	<?php boomnews_title(); ?>
+	<?php infowazz_title(); ?>
 <div class="container mt-content-container">
 <div class="row">
 
@@ -17,9 +17,9 @@
 
 		<?php else : ?>
 						<div id="post-0" class="post no-results not-found">
-							<h2 class="entry-title"><?php esc_html_e( 'Nothing Found', 'boomnews'  ); ?></h2>
+							<h2 class="entry-title"><?php esc_html_e( 'Nothing Found', 'infowazz'  ); ?></h2>
 							<div class="entry-content">
-								<p><?php esc_html_e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'boomnews'  ); ?></p>
+								<p><?php esc_html_e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'infowazz'  ); ?></p>
 
 							</div>
 						</div>

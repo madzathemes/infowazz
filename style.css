@@ -2,7 +2,7 @@
 /*-----------------------------------------------------------------------------------
   	Version: 1.0
     Theme Name: InfoWazz
-    Theme URI: https://boomnews.magazine-themes.net/
+    Theme URI: https://infowazz.magazine-themes.net/
     Description: Magazine / Blog
     Author: Madars Bitenieks
     Author URI: https://magazine-themes.net/
@@ -11,7 +11,7 @@
 	Author Madars Bitenieks for https://magazine-themes.net/
     All files, unless otherwise stated, are released under the GNU General Public License
     version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
-    Text Domain: boomnews
+    Text Domain: infowazz
 
 1.0 Normalize
 2.0 Color
@@ -885,7 +885,7 @@ ul.sf-menu ul, div.sf-menu ul ul {
     z-index: 99;
 }
 
-.sf-menu>li {
+.sf-menu>li, div.sf-menu ul>li {
     display: inline-block;
 }
 
@@ -1440,24 +1440,27 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-up.fix-menu .header-wrap,
 .mt-fixed-disabled.fixed-on .header-wrap {
-  transform: translate(0,-107px);
-  -webkit-transform: translate(0,-107px); /** Safari & Chrome **/
-  -o-transform: translate(0,-107px); /** Opera **/
-  -moz-transform: translate(0,-107px); /** Firefox **/
+  transform: translate(0,-105px);
+  -webkit-transform: translate(0,-105px); /** Safari & Chrome **/
+  -o-transform: translate(0,-105px); /** Opera **/
+  -moz-transform: translate(0,-105px); /** Firefox **/
 }
-.mt-fixed-up.nav-down.fixed-on .header-wrap,
-.mt-fixed-always.fixed-on .header-wrap{
-  transform: translate(0,-47px);
-  -webkit-transform: translate(0,-47px); /** Safari & Chrome **/
-  -o-transform: translate(0,-47px); /** Opera **/
-  -moz-transform: translate(0,-47px); /** Firefox **/
+.mt-fixed-up.nav-down.fixed-on.header-top-on .header-wrap,
+.mt-fixed-always.fixed-on.header-top-on .header-wrap{
+  transform: translate(0,-45px);
+  -webkit-transform: translate(0,-45px); /** Safari & Chrome **/
+  -o-transform: translate(0,-45px); /** Opera **/
+  -moz-transform: translate(0,-45px); /** Firefox **/
 }
 .header-wrap {
   position: fixed;
   width: 100%;
 }
-.header-wrap-space {
+.header-top-on .header-wrap-space {
   height: 107px;
+}
+.header-wrap-space {
+  height: 60px;
 }
 .header-menu {
   -webkit-backface-visibility: hidden;
@@ -1467,15 +1470,15 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .fixed-top {
   -webkit-backface-visibility: hidden;
-  transform: translate(0,-130px);
-  -webkit-transform: translate(0,-130px); /** Safari & Chrome **/
-  -o-transform: translate(0,-130px); /** Opera **/
-  -moz-transform: translate(0,-130px); /** Firefox **/
   height: 42px;
   position: fixed;
   width: 100%;
   z-index: 9999;
   background: white;
+  transform: translate(0,-130px);
+  -webkit-transform: translate(0,-130px); /** Safari & Chrome **/
+  -o-transform: translate(0,-130px); /** Opera **/
+  -moz-transform: translate(0,-130px); /** Firefox **/
 }
 .fixed-on .fixed-top {
   transform: translate(0,0);
@@ -2301,7 +2304,7 @@ h2.heading span {
   z-index: 1;
 }
 .post-carousel .slick-slide {
-  padding-right: 10px;
+  padding-right: 0px;
 }
 .post-carousel .slick-list {
   width: 100%;
@@ -4039,7 +4042,7 @@ opacity: 0.7
 }
 @media all and (max-width: 320px) {
   .poster-large-content h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
   .nav-search-wrap,
   .search-close {

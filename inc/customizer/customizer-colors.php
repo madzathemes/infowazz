@@ -1,38 +1,38 @@
 <?php
-function boomnews_customize_colors($wp_customize){
+function infowazz_customize_colors($wp_customize){
 
   $wp_customize->add_panel( 'colors_settings', array(
     'priority'       => 300,
     'capability'     => 'edit_theme_options',
-    'title'    	=> esc_html__('Style', 'boomnews'),
+    'title'    	=> esc_html__('Style', 'infowazz'),
   ));
 
   $wp_customize->add_section('general_style_settings', array(
-    'title'    	=> esc_html__('General', 'boomnews'),
+    'title'    	=> esc_html__('General', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
 
 
   $wp_customize->add_section('background_settings', array(
-    'title'    	=> esc_html__('Background', 'boomnews'),
+    'title'    	=> esc_html__('Background', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[background_image]', array(
+  Kirki::add_field( 'infowazz_theme_options[background_image]', array(
     'type'        => 'image',
-    'settings'    => 'boomnews_theme_options[background_image]',
-    'label'       => esc_html__( 'Background Image', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[background_image]',
+    'label'       => esc_html__( 'Background Image', 'infowazz' ),
     'section'     => 'background_settings',
     'default'     => '',
     'option_type' => 'option',
     'priority'    => 10,
   ) );
 
-  Kirki::add_field( 'boomnews_theme_options[background_color]', array(
+  Kirki::add_field( 'infowazz_theme_options[background_color]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[background_color]',
-    'label'       => esc_html__( 'Background Color', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[background_color]',
+    'label'       => esc_html__( 'Background Color', 'infowazz' ),
     'section'     => 'background_settings',
     'default'     => '',
     'option_type' => 'option',
@@ -41,31 +41,31 @@ function boomnews_customize_colors($wp_customize){
 
   // GENERAL COLORS //
   $wp_customize->add_section('colors_general', array(
-    'title'    	=> esc_html__('General', 'boomnews'),
+    'title'    	=> esc_html__('General', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_default]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_default]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
     ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_default]', array(
-      'label'    => esc_html__('Site Color', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_default]', array(
+      'label'    => esc_html__('Site Color', 'infowazz'),
       'section'  => 'general_style_settings',
-      'settings' => 'boomnews_theme_options[colors_default]',
+      'settings' => 'infowazz_theme_options[colors_default]',
     )));
 
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_button]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_button]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
     ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_button]', array(
-      'label'    => esc_html__('Form Button', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_button]', array(
+      'label'    => esc_html__('Form Button', 'infowazz'),
       'section'  => 'general_style_settings',
-      'settings' => 'boomnews_theme_options[colors_button]',
+      'settings' => 'infowazz_theme_options[colors_button]',
   )));
 
 
@@ -73,133 +73,133 @@ function boomnews_customize_colors($wp_customize){
 
   // MENU COLORS //
   $wp_customize->add_section('colors_menu', array(
-    'title'    	=> esc_html__('Menu Colors', 'boomnews'),
+    'title'    	=> esc_html__('Menu Colors', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_bg]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_bg]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_bg]',
-    'label'       => esc_html__( 'Background', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_bg]',
+    'label'       => esc_html__( 'Background', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 1,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu]',
-    'label'       => esc_html__( 'Link', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu]',
+    'label'       => esc_html__( 'Link', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 10,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_hover_text]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_hover_text]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_hover_text]',
-    'label'       => esc_html__( 'Link Hover', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_hover_text]',
+    'label'       => esc_html__( 'Link Hover', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 11,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_hover]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_hover]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_hover]',
-    'label'       => esc_html__( 'Link Hover Border', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_hover]',
+    'label'       => esc_html__( 'Link Hover Border', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 12,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_sub]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_sub]',
-    'label'       => esc_html__( 'Sub Link', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_sub]',
+    'label'       => esc_html__( 'Sub Link', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 14,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_sub_hover]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_hover]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_sub_hover]',
-    'label'       => esc_html__( 'Sub Link Hover', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_sub_hover]',
+    'label'       => esc_html__( 'Sub Link Hover', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 15,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_sub_background]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_background]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_sub_background]',
-    'label'       => esc_html__( 'Sub Link Background', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_sub_background]',
+    'label'       => esc_html__( 'Sub Link Background', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 14,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_sub_hover_background]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_hover_background]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_sub_hover_background]',
-    'label'       => esc_html__( 'Sub Link Background Hover', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_sub_hover_background]',
+    'label'       => esc_html__( 'Sub Link Background Hover', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 15,
   ));
 
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_button]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_button]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_button]',
-    'label'       => esc_html__( 'Small Menu Button Hover', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_button]',
+    'label'       => esc_html__( 'Small Menu Button Hover', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 20,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_button_background]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_button_background]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_button_background]',
-    'label'       => esc_html__( 'Small Menu Button Hover Background', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_button_background]',
+    'label'       => esc_html__( 'Small Menu Button Hover Background', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 20,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_background]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_background]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_background]',
-    'label'       => esc_html__( 'Small Menu Background', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_background]',
+    'label'       => esc_html__( 'Small Menu Background', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 21,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_link]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_link]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_link]',
-    'label'       => esc_html__( 'Small Menu Link', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_link]',
+    'label'       => esc_html__( 'Small Menu Link', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 22,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_link_hover]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_link_hover]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_link_hover]',
-    'label'       => esc_html__( 'Small Menu Link Hover', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_link_hover]',
+    'label'       => esc_html__( 'Small Menu Link Hover', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 23,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[colors_menu_small_text]', array(
+  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_text]', array(
     'type'        => 'color',
-    'settings'    => 'boomnews_theme_options[colors_menu_small_text]',
-    'label'       => esc_html__( 'Small Menu Text', 'boomnews' ),
+    'settings'    => 'infowazz_theme_options[colors_menu_small_text]',
+    'label'       => esc_html__( 'Small Menu Text', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 24,
@@ -208,142 +208,142 @@ function boomnews_customize_colors($wp_customize){
 
   // FOOTER COLORS //
   $wp_customize->add_section('colors_footer', array(
-    'title'    	=> esc_html__('Footer Colors', 'boomnews'),
+    'title'    	=> esc_html__('Footer Colors', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_top_background]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_background]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_top_background]', array(
-      'label'    => esc_html__('Top Footer Background', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_background]', array(
+      'label'    => esc_html__('Top Footer Background', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_top_background]',
+      'settings' => 'infowazz_theme_options[colors_footer_top_background]',
   )));
 
 
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_top_link]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_link]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_top_link]', array(
-      'label'    => esc_html__('Top Footer Link', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_link]', array(
+      'label'    => esc_html__('Top Footer Link', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_top_link]',
+      'settings' => 'infowazz_theme_options[colors_footer_top_link]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_top_link_hover]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_link_hover]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_top_link_hover]', array(
-      'label'    => esc_html__('Top Footer Link Hover', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_link_hover]', array(
+      'label'    => esc_html__('Top Footer Link Hover', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_top_link_hover]',
+      'settings' => 'infowazz_theme_options[colors_footer_top_link_hover]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_border]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_border]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_border]', array(
-      'label'    => esc_html__('Footer Border', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_border]', array(
+      'label'    => esc_html__('Footer Border', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_border]',
+      'settings' => 'infowazz_theme_options[colors_footer_border]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_bottom_background]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_background]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_bottom_background]', array(
-      'label'    => esc_html__('Bottom Footer Background', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_background]', array(
+      'label'    => esc_html__('Bottom Footer Background', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_bottom_background]',
+      'settings' => 'infowazz_theme_options[colors_footer_bottom_background]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_bottom_text]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_text]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_bottom_text]', array(
-      'label'    => esc_html__('Bottom Footer Text', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_text]', array(
+      'label'    => esc_html__('Bottom Footer Text', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_bottom_text]',
+      'settings' => 'infowazz_theme_options[colors_footer_bottom_text]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_bottom_link]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_link]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_bottom_link]', array(
-      'label'    => esc_html__('Bottom Footer Link', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_link]', array(
+      'label'    => esc_html__('Bottom Footer Link', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_bottom_link]',
+      'settings' => 'infowazz_theme_options[colors_footer_bottom_link]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_bottom_link_hover]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_link_hover]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_bottom_link_hover]', array(
-      'label'    => esc_html__('Bottom Footer Link Hover', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_link_hover]', array(
+      'label'    => esc_html__('Bottom Footer Link Hover', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_bottom_link_hover]',
+      'settings' => 'infowazz_theme_options[colors_footer_bottom_link_hover]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_social_icon]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_icon]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_social_icon]', array(
-      'label'    => esc_html__('Social Icon', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_icon]', array(
+      'label'    => esc_html__('Social Icon', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_social_icon]',
+      'settings' => 'infowazz_theme_options[colors_footer_social_icon]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_social_background]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_background]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_social_background]', array(
-      'label'    => esc_html__('Social Icon Background', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_background]', array(
+      'label'    => esc_html__('Social Icon Background', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_social_background]',
+      'settings' => 'infowazz_theme_options[colors_footer_social_background]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_social_icon_hover]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_icon_hover]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_social_icon_hover]', array(
-      'label'    => esc_html__('Social Icon Hover', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_icon_hover]', array(
+      'label'    => esc_html__('Social Icon Hover', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_social_icon_hover]',
+      'settings' => 'infowazz_theme_options[colors_footer_social_icon_hover]',
   )));
 
-  $wp_customize->add_setting('boomnews_theme_options[colors_footer_social_background_hover]', array(
+  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_background_hover]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
       'sanitize_callback' => 'sanitize_hex_color',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'boomnews_theme_options[colors_footer_social_background_hover]', array(
-      'label'    => esc_html__('Social Icon Hover Background', 'boomnews'),
+  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_background_hover]', array(
+      'label'    => esc_html__('Social Icon Hover Background', 'infowazz'),
       'section'  => 'colors_footer',
-      'settings' => 'boomnews_theme_options[colors_footer_social_background_hover]',
+      'settings' => 'infowazz_theme_options[colors_footer_social_background_hover]',
   )));
 
 
@@ -352,5 +352,5 @@ function boomnews_customize_colors($wp_customize){
 
 }
 
-add_action('customize_register', 'boomnews_customize_colors');
+add_action('customize_register', 'infowazz_customize_colors');
 ?>

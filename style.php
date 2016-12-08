@@ -1,5 +1,5 @@
 <style type="text/css"><?php
-$options = get_option("boomnews_theme_options");
+$options = get_option("infowazz_theme_options");
 $style = get_post_meta(get_the_ID(), "magazin_background_color", true);
 if(!empty($style)){ ?>
 	body { background-color: <?php echo esc_attr($style); ?> }

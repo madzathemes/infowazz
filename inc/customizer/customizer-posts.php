@@ -1,31 +1,31 @@
 <?php
-function boomnews_customize_posts($wp_customize){
+function infowazz_customize_posts($wp_customize){
 
 
 
   $wp_customize->add_section('posts_default_settings', array(
-    'title'    	=> esc_html__('Posts', 'boomnews'),
+    'title'    	=> esc_html__('Posts', 'infowazz'),
     'priority'       => 301,
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[post_carousel]', array(
+  Kirki::add_field( 'infowazz_theme_options[post_carousel]', array(
 	'type'        => 'switch',
-	'settings'    => 'boomnews_theme_options[post_carousel]',
-	'label'       => esc_html__( 'Post Carousel', 'boomnews' ),
+	'settings'    => 'infowazz_theme_options[post_carousel]',
+	'label'       => esc_html__( 'Post Carousel', 'infowazz' ),
 	'section'     => 'posts_default_settings',
 	'default'     => 'yes',
   'option_type' => 'option',
 	'priority'    => 10,
 	'choices'     => array(
-		'yes'  => esc_attr__( 'Enable', 'boomnews' ),
-		'no' => esc_attr__( 'Disable', 'boomnews' ),
+		'yes'  => esc_attr__( 'Enable', 'infowazz' ),
+		'no' => esc_attr__( 'Disable', 'infowazz' ),
 	),
   ) );
 
-  Kirki::add_field( 'boomnews_theme_options[post_sidebar]', array(
+  Kirki::add_field( 'infowazz_theme_options[post_sidebar]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'boomnews_theme_options[post_sidebar]',
-  	'label'       => esc_html__( 'Sidebar Position', 'boomnews' ),
+  	'settings'    => 'infowazz_theme_options[post_sidebar]',
+  	'label'       => esc_html__( 'Sidebar Position', 'infowazz' ),
   	'section'     => 'posts_default_settings',
   	'default'     => 'left',
     'option_type' => 'option',
@@ -36,10 +36,10 @@ function boomnews_customize_posts($wp_customize){
   	   ),
   ));
 
-  Kirki::add_field( 'boomnews_theme_options[post_style]', array(
+  Kirki::add_field( 'infowazz_theme_options[post_style]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'boomnews_theme_options[post_style]',
-  	'label'       => esc_html__( 'Post Style', 'boomnews' ),
+  	'settings'    => 'infowazz_theme_options[post_style]',
+  	'label'       => esc_html__( 'Post Style', 'infowazz' ),
   	'section'     => 'posts_default_settings',
   	'default'     => '1',
     'option_type' => 'option',
@@ -64,5 +64,5 @@ function boomnews_customize_posts($wp_customize){
 
 }
 
-add_action('customize_register', 'boomnews_customize_posts');
+add_action('customize_register', 'infowazz_customize_posts');
 ?>

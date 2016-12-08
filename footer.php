@@ -5,7 +5,7 @@
 				<?php echo html_entity_decode($optionz['article_ad_bottom']); ?>
 			</div>
 		<?php } ?>
-	<?php $option = get_option("boomnews_theme_options"); ?>
+	<?php $option = get_option("infowazz_theme_options"); ?>
 	<?php if(!empty($option['footer_page'])){ ?>
 		<?php $footer_page = $option['footer_page']; ?>
 		<?php $footer = new WP_Query("page_id=$footer_page"); while($footer->have_posts()) : $footer->the_post(); ?>
@@ -16,7 +16,7 @@
 	<?php } ?>
 	<?php if(!empty($option['footer_top']) or !empty($option['footer_bottom'])){ ?>
 		<div class="footer">
-			<?php boomnews_footer_3(); ?>
+			<?php infowazz_footer_3(); ?>
 		</div>
 	<?php } ?>
 	</div>

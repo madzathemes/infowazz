@@ -9,7 +9,7 @@
 </head>
 
 <?php
-$option = get_option("boomnews_theme_options");
+$option = get_option("infowazz_theme_options");
 ?>
 <body <?php body_class(); ?>>
 
@@ -43,12 +43,12 @@ if(!empty($style)){
 
 <div class="mt-smart-menu">
 	<span class="close pointer"></span>
-	<?php boomnews_logo(); ?>
-	<?php boomnews_nav_mobile(); ?>
-	<?php boomnews_socials(); ?>
+	<?php infowazz_logo(); ?>
+	<?php infowazz_nav_mobile(); ?>
+	<?php infowazz_socials(); ?>
 </div>
 
 
 <div class="mt-outer-wrap">
 
-<?php boomnews_header(); ?>
+<?php infowazz_header(); ?>

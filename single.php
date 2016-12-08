@@ -7,7 +7,7 @@
 get_header();
 
 $style = get_post_meta(get_the_ID(), "magazin_post_style", true);
-$option = get_option("boomnews_theme_options");
+$option = get_option("infowazz_theme_options");
 $default = "";
 if(!empty($option['post_style'])) {
 	$default = $option['post_style'];

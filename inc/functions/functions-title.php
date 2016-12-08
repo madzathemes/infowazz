@@ -1,4 +1,4 @@
-<?php function boomnews_title() {
+<?php function infowazz_title() {
 
   ?>
   <div class="container page-title">
@@ -8,7 +8,7 @@
           <h1><?php the_title(); ?></h1>
         <?php } else ?>
         <?php if(is_search()) { ?>
-					<h1><?php printf( esc_html__( 'Search Results for: %s', "boomnews"  ), '' . get_search_query() . '' ); ?></h1>
+					<h1><?php printf( esc_html__( 'Search Results for: %s', "infowazz"  ), '' . get_search_query() . '' ); ?></h1>
         <?php } ?>
       </div>
     </div>
@@ -16,4 +16,4 @@
   <?php
 }
 
-add_filter('boomnews_title','boomnews_title'); ?>
+add_filter('infowazz_title','infowazz_title'); ?>

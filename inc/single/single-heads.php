@@ -1,18 +1,18 @@
-<?php function boomnews_single_cat() {?>
+<?php function infowazz_single_cat() {?>
 
   <div class="single-cat-wrap"><?php echo get_the_category_list(); ?></div>
 
 <?php } ?>
-<?php function boomnews_single_cat_posts() {
+<?php function infowazz_single_cat_posts() {
 
   $category_name = get_the_category(get_the_ID()); $cat =""; if(!empty($category_name[0])) { $cat =''.$category_name[0]->slug.''; } if ( shortcode_exists( 'posts' ) ) { echo do_shortcode('[posts item_nr=5  category="'.$cat.'" type=small-bottom ]'); }
 
 } ?>
-<?php function boomnews_single_title() {?>
+<?php function infowazz_single_title() {?>
   <h1 class="single-title"><?php echo get_the_title(); ?></h1>
   <h2 class="single-subtitle"><?php echo get_post_meta(get_the_ID(), "magazin_subtitle", true); ?></h2>
 <?php } ?>
-<?php function boomnews_single_social() {
+<?php function infowazz_single_social() {
 $share_top = "";
 $share_top = get_post_meta(get_the_ID(), "magazin_post_share_top", true);
 
@@ -48,8 +48,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
 
     <?php if($share_top=="" or $share_top == "yes"){ ?>
     <ul class="share top">
-      <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'boomnews'); ?></span></a></li>
-      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php the_title(); ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'boomnews'); ?></span></a></li>
+      <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'infowazz'); ?></span></a></li>
+      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php the_title(); ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'infowazz'); ?></span></a></li>
       <li class="share-more">
         <div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
 

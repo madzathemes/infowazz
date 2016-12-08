@@ -1,9 +1,9 @@
 <?php
 
-if ( ! function_exists( 'boomnews_paging_nav' ) ) :
+if ( ! function_exists( 'infowazz_paging_nav' ) ) :
 
-function boomnews_paging_nav() {
-	global $wp_query,  $boomnews_allowed_html_array;
+function infowazz_paging_nav() {
+	global $wp_query,  $infowazz_allowed_html_array;
 
 	// Don't print empty markup if there's only one page.
 	if ( $wp_query->max_num_pages < 2 )
@@ -14,11 +14,11 @@ function boomnews_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous pagination-link"><?php next_posts_link( wp_kses(__( '<span class="meta-nav">&larr; Older posts</span> ', 'boomnews'  ), $boomnews_allowed_html_array ) ); ?></div>
+			<div class="nav-previous pagination-link"><?php next_posts_link( wp_kses(__( '<span class="meta-nav">&larr; Older posts</span> ', 'infowazz'  ), $infowazz_allowed_html_array ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next pagination-link"><?php previous_posts_link( wp_kses(__( '<span class="meta-nav">Newer posts  &rarr;</span>', 'boomnews'  ), $boomnews_allowed_html_array ) ); ?></div>
+			<div class="nav-next pagination-link"><?php previous_posts_link( wp_kses(__( '<span class="meta-nav">Newer posts  &rarr;</span>', 'infowazz'  ), $infowazz_allowed_html_array ) ); ?></div>
 			<?php endif; ?>
 			<div class="clear"></div>
 		</div><!-- .nav-links -->
@@ -27,23 +27,23 @@ function boomnews_paging_nav() {
 }
 endif;
 
-$navigation_speed = "4.6.2";
+$navigation_speed = "4.8";
 
 
-if ( ! function_exists( 'boomnews_entry_meta' ) ) {
+if ( ! function_exists( 'infowazz_entry_meta' ) ) {
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
  *
  * Create your own _entry_meta() to override in a child theme.
  *
  */
-	function boomnews_entry_meta() {
-		 global $boomnews_allowed_html_array;
+	function infowazz_entry_meta() {
+		 global $infowazz_allowed_html_array;
 		// Translators: used between list items, there is a space after the comma.
-		$categories_list = get_the_category_list( esc_html__( ', ', 'boomnews' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'infowazz' ) );
 
 		// Translators: used between list items, there is a space after the comma.
-		$tag_list = get_the_tag_list( '', esc_html__( ', ', 'boomnews' ) );
+		$tag_list = get_the_tag_list( '', esc_html__( ', ', 'infowazz' ) );
 
 		$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s"> %4$s</time></a>',
 			esc_url( get_permalink() ),
@@ -54,17 +54,17 @@ if ( ! function_exists( 'boomnews_entry_meta' ) ) {
 
 		$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'boomnews' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'infowazz' ), get_the_author() ) ),
 			get_the_author()
 		);
 
 		// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
 		if ( $tag_list ) {
-			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-tag"></i> %2$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'boomnews' ), $boomnews_allowed_html_array );
+			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-tag"></i> %2$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'infowazz' ), $infowazz_allowed_html_array );
 		} elseif ( $categories_list ) {
-			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'boomnews' ), $boomnews_allowed_html_array );
+			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'infowazz' ), $infowazz_allowed_html_array );
 		} else {
-			$utility_text = wp_kses(__( '<div class="mt-meta">Posted on <i class="fa fa-calendar"></i> %3$s </div>', 'boomnews' ), $boomnews_allowed_html_array );
+			$utility_text = wp_kses(__( '<div class="mt-meta">Posted on <i class="fa fa-calendar"></i> %3$s </div>', 'infowazz' ), $infowazz_allowed_html_array );
 		}
 
 		printf(
@@ -77,18 +77,18 @@ if ( ! function_exists( 'boomnews_entry_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'boomnews_content_nav' ) ) {
+if ( ! function_exists( 'infowazz_content_nav' ) ) {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
  */
-	function boomnews_content_nav( $nav_id ) {
-		global $wp_query,  $boomnews_allowed_html_array;
+	function infowazz_content_nav( $nav_id ) {
+		global $wp_query,  $infowazz_allowed_html_array;
 		if ( $wp_query->max_num_pages > 1 ) : ?>
 			<nav id="<?php echo esc_attr($nav_id); ?>" class="navigation" role="navigation">
 				<div class="nav-links">
-					<div class="nav-previous alignleft"><?php next_posts_link( wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'boomnews' ), $boomnews_allowed_html_array  )); ?></div>
-					<div class="nav-next alignright"><?php previous_posts_link( wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'boomnews' ), $boomnews_allowed_html_array  )); ?></div>
+					<div class="nav-previous alignleft"><?php next_posts_link( wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'infowazz' ), $infowazz_allowed_html_array  )); ?></div>
+					<div class="nav-next alignright"><?php previous_posts_link( wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'infowazz' ), $infowazz_allowed_html_array  )); ?></div>
 					<div class="clear"></div>
 				</div>
 			</nav><!-- #<?php echo esc_attr($nav_id); ?> .navigation -->
@@ -108,7 +108,7 @@ global $wp_version; if (version_compare($wp_version, $navigation_speed, '>=')) {
  * @param string $sep Optional separator.
  * @return string Filtered title.
  */
-function boomnews_wp_title( $title, $sep ) {
+function infowazz_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() )
@@ -124,28 +124,28 @@ function boomnews_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'boomnews' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'infowazz' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'boomnews_wp_title', 10, 2 );
+add_filter( 'wp_title', 'infowazz_wp_title', 10, 2 );
 
 
 /**
  * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.
  *
  */
-function boomnews_page_menu_args( $args ) {
+function infowazz_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'boomnews_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'infowazz_page_menu_args' );
 
 /**
  * Enqueues scripts and styles for front-end.
  *
  */
-function boomnews_scripts_styles() {
+function infowazz_scripts_styles() {
 	/*
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
@@ -155,7 +155,7 @@ function boomnews_scripts_styles() {
 
 
 }
-add_action( 'wp_enqueue_scripts', 'boomnews_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'infowazz_scripts_styles' );
 
 
 
@@ -164,10 +164,10 @@ add_action( 'wp_enqueue_scripts', 'boomnews_scripts_styles' );
 /* Breadcrumb function
 /*-----------------------------------------------------------------------------------*/
 
-function boomnews_breadcrumbs() {
+function infowazz_breadcrumbs() {
 
   $delimiter = '<span class="liners">/</span>';
-  $home = esc_html__( 'Home', 'boomnews'  ); // text for the 'Home' link
+  $home = esc_html__( 'Home', 'infowazz'  ); // text for the 'Home' link
   $before = '<span>'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
 
@@ -255,7 +255,7 @@ function boomnews_breadcrumbs() {
 
     if ( get_query_var('paged') ) { echo " / ";  echo esc_html($before); echo " ";
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-      echo esc_html__('Page', 'boomnews' ) . ' ' . get_query_var('paged');
+      echo esc_html__('Page', 'infowazz' ) . ' ' . get_query_var('paged');
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     echo esc_html($after); }
 

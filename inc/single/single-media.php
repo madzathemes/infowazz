@@ -1,4 +1,4 @@
-<?php function boomnews_single_media() {
+<?php function infowazz_single_media() {
 
   $images = get_post_meta( get_the_ID(), 'magazin_post_gallery_images', 1 );
   $videos = get_post_meta(get_the_ID(), "magazin_video_url", true);
@@ -56,4 +56,4 @@
   <?php } ?>
 
 <?php } ?>
-<?php add_filter('boomnews_single_media','boomnews_single_media'); ?>
+<?php add_filter('infowazz_single_media','infowazz_single_media'); ?>

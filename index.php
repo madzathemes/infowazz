@@ -27,7 +27,7 @@ if ($mt_layout == "left") {
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
-		<?php boomnews_paging_nav(); ?>
+		<?php infowazz_paging_nav(); ?>
 
 	</div>
 
