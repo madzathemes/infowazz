@@ -3404,11 +3404,10 @@ opacity: 0.7
   padding: 40px 0px 10px;
 }
 .footer-bottom {
-  background: #222;
+  background: white;
   padding-bottom: 40px;
 }
 .footer-bottom p{
-  color: #fff;
   font-size: 13px;
   line-height: 1;
   display: inline-block;
@@ -3428,7 +3427,6 @@ opacity: 0.7
   font-size: 13px;
 }
 .footer-bottom a {
-  color: #fff;
   font-size: 14px;
 }
 .footer-bottom .head-nav {
