@@ -3381,7 +3381,7 @@ opacity: 0.7
 
 /* FOOTER */
 .footer {
-  background: #222;
+  background: white;
   z-index: 9999;
   position: relative;
 }
