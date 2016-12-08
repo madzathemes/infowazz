@@ -2296,7 +2296,7 @@ h2.heading span {
 
 /* Post Carousel */
 .post-carousel {
-  padding-left: 10px;
+  padding-left: 0px;
   display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
