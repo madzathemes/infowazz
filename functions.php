@@ -61,10 +61,11 @@ function infowazz_theme_setup() {
 		'footer_menu' => esc_html__( 'Footer Navigation', 'infowazz' ),
 	) );
 	if ( ! isset( $content_width ) ) { $content_width = 900; }
+
+
 }
 
 add_action( 'after_setup_theme', 'infowazz_theme_setup' );
-
 
 /*-----------------------------------------------------------------------------------*/
 /* Default Options
