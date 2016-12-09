@@ -2758,9 +2758,6 @@ opacity: 0.7
 .single-media-title .author-info a {
   color: white !important;
 }
-.single-media-title .single-cat-wrap {
-  display: none;
-}
 .single-image-gradient:before {
     bottom: 0;
     content: "";
