@@ -2315,7 +2315,7 @@ h2.heading span {
 }
 .poster-next,
 .poster-prev{
-    padding: 5px 5px 2px;
+    padding: 8px 8px 4px;
     float: left;
     background: #222;
     color: white;
@@ -2325,13 +2325,13 @@ h2.heading span {
 }
 .poster-next:hover,
 .poster-prev:hover {
-  color: white;
+  color: #222;
 }
 .poster-next {
-  right: 30px;
+  right: 0px;
   position: absolute;
   bottom: 100%;
-  margin-bottom: -50px;
+  margin-bottom: -27px;
 }
 .poster-next:before {
   content: "\62";
