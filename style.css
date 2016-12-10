@@ -89,7 +89,8 @@ a:hover,
 .mt-radius-25 .mt-coment-nav a,
 .mtc-border-25,
 .mct-box:hover:before,
-.mct-box.active:before {
+.mct-box.active:before,
+.mt-pagepagination a {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
@@ -4144,6 +4145,27 @@ ul.page-numbers li {
 
 .page-numbers:hover { text-decoration: none }
 
+.mt-pagepagination p {
+  padding: 20px 0px;
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+.mt-pagepagination a {
+  color: white;
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+.mt-pagepagination a span {
+  color: white;
+  background: #222;
+}
+.mt-pagepagination span {
+  display: inline-block;
+  padding: 8px 13px;
+  margin: 0px 0px 0px 5px;
+  background: #f5f5f5;
+}
 .pagination {
   margin-bottom: 40px;
   text-align: center;

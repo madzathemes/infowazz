@@ -18,7 +18,7 @@ $share_top = get_post_meta(get_the_ID(), "magazin_post_share_top", true);
 
 /* Share Meta from Magazin framework */
 $share = get_post_meta(get_the_ID(), "magazin_share_count", true);
-$shares = "";
+$shares = "0";
 if (class_exists('Kirki')) {
   $shares = magazin_get_shares(get_the_ID());
 }
@@ -60,8 +60,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
     </ul>
     <?php } ?>
     <div class="post-statistic">
-      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?></span><?php } ?>
+      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
     </div>
     <div class="single-stat-comments">
       <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> Comments</span><?php } ?>
