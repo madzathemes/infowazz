@@ -4145,26 +4145,31 @@ ul.page-numbers li {
 
 .page-numbers:hover { text-decoration: none }
 
-.mt-pagepagination p {
+.mt-pagepagination p,
+.page-links {
   padding: 20px 0px;
   font-size: 14px !important;
   text-transform: uppercase;
 }
+.page-links a,
 .mt-pagepagination a {
   color: white;
   display: inline;
   margin: 0px;
   padding: 0px;
 }
-.mt-pagepagination a span {
-  color: white;
-  background: #222;
-}
-.mt-pagepagination span {
+
+.mt-pagepagination span,
+.page-links a {
   display: inline-block;
   padding: 8px 13px;
   margin: 0px 0px 0px 5px;
   background: #f5f5f5;
+}
+.mt-pagepagination a span,
+.page-links a {
+  color: white;
+  background: #222;
 }
 .pagination {
   margin-bottom: 40px;
