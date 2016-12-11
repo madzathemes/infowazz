@@ -46,6 +46,14 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       </div>
     </div>
 
+
+    <div class="post-statistic pull-left">
+      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
+    </div>
+    <div class="single-stat-comments">
+      <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> Comments</span><?php } ?>
+    </div>
     <?php if($share_top=="" or $share_top == "yes"){ ?>
     <ul class="share top">
       <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'infowazz'); ?></span></a></li>
@@ -59,13 +67,6 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       </li>
     </ul>
     <?php } ?>
-    <div class="post-statistic">
-      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
-    </div>
-    <div class="single-stat-comments">
-      <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> Comments</span><?php } ?>
-    </div>
     <div class="clearfix"></div>
   </div>
 
