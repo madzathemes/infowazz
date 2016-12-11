@@ -1452,10 +1452,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-down.fixed-on.header-top-on .header-wrap,
 .mt-fixed-always.fixed-on.header-top-on .header-wrap{
-  transform: translate(0,-45px);
-  -webkit-transform: translate(0,-45px); /** Safari & Chrome **/
-  -o-transform: translate(0,-45px); /** Opera **/
-  -moz-transform: translate(0,-45px); /** Firefox **/
+  transform: translate(0,-47px);
+  -webkit-transform: translate(0,-47px); /** Safari & Chrome **/
+  -o-transform: translate(0,-47px); /** Opera **/
+  -moz-transform: translate(0,-47px); /** Firefox **/
 }
 .header-wrap {
   position: fixed;
