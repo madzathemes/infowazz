@@ -3870,6 +3870,7 @@ opacity: 0.7
     height: 300px;
   }
 
+  .mt-tabc,
   .head-nav a spans,
   .share.top,
   .share.down {
@@ -3917,7 +3918,6 @@ opacity: 0.7
   .poster.trending-carousel {
     width: 590px;
   }
-  .mt-tabc,
   .mt-top-menu,
   .mt-top-share { display: none !important;}
   .mt-top-social {
@@ -4006,6 +4006,12 @@ opacity: 0.7
   }
   .grid-post .poster-cat {
     display: none;
+  }
+  .poster .poster-cat {
+    display: block;
+  }
+  .poster.normal .poster-data {
+    padding: 5px 0px 0px 0px;
   }
   .single-title {
     padding-bottom: 5px;
