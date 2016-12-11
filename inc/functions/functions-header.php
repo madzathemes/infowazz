@@ -163,7 +163,7 @@ add_filter('infowazz_nav_fixed','infowazz_nav_fixed');
 function infowazz_nav_mobile() {
 	wp_nav_menu( array('theme_location'=>"mobile",  'menu_class' => 'mobile',  'echo' => true, 'depth' => 2));
 }
-add_filter('infowazz_nav_mobile','infowazz_nav_mobile');
+add_filter('infowazz_nav_mobile','infowazz_nav_mobile');fix
 
 function infowazz_top_menu() {
 	wp_nav_menu( array('theme_location'=>"top_menu",  'menu_class' => 'top-menu',  'echo' => true, 'depth' => 1));
