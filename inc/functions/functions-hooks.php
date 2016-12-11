@@ -2,7 +2,6 @@
 function infowazz_header_script() {
 
 		wp_enqueue_style('infowazz-', get_stylesheet_uri());
-		wp_enqueue_script('infowazz-effects', get_template_directory_uri() . '/inc/js/effects.js', array('jquery'), '1.0', true);
 
 		$option = get_option("infowazz_theme_options");
 
