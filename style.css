@@ -4063,6 +4063,35 @@ opacity: 0.7
   .fixed-top .share li.share-twitter a, .fixed-top .share li.share-facebook a {
     padding-right: 11px;
   }
+  .share li a {
+    padding: 7px 11px 35px 35px;
+  }
+  .share.down li a,
+  .share.top li a {
+    padding: 7px 11px 35px 35px;
+  }
+  .share.down .share-more .pinterest:before,
+  .share.top .share-more .pinterest:before {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .share.down .share-more a,
+  .share.top .share-more a {
+    position: absolute;
+    top: 40px;
+    float:none !important;
+    padding: 10px 0px 0px 0px;
+  }
+  .share.down .share-more a:first-child,
+  .share.top .share-more a:first-child {
+    top: 90px!important;
+  }
+  .share.down .share-more,
+  .share.top .share-more {
+    position: relative;
+    float:none;
+  }
+
 }
 @media all and (max-width: 400px) {
 
