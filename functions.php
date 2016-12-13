@@ -53,6 +53,7 @@ function infowazz_theme_setup() {
 		require_once( $locale_file );
 
 	set_post_thumbnail_size( 999, 999, true );
+	add_image_size( 'infowazz_810', 810, 9999, false );
 
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Header Menu', 'infowazz' ),
@@ -71,10 +72,6 @@ add_action( 'after_setup_theme', 'infowazz_theme_setup' );
 /* Default Options
 /*-----------------------------------------------------------------------------------*/
 
-function infowazz_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'infowazz_javascript_detection', 0 );
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 740;
