@@ -890,8 +890,11 @@ ul.sf-menu ul, div.sf-menu ul ul {
     z-index: 99;
 }
 
-.sf-menu>li, div.sf-menu ul>li {
+ul.sf-menu>li, div.sf-menu ul>li {
     display: inline-block;
+}
+ul.sf-menu ul li, div.sf-menu ul ul li {
+    display: block;
 }
 
 .sf-menu li:hover>ul, .sf-menu li.sfHover>ul {
@@ -1033,6 +1036,11 @@ ul.sf-menu > li,
 div.sf-menu ul > li {
   margin-left:20px;
   margin-right:15px;
+}
+ul.sf-menu ul li,
+div.sf-menu ul ul li {
+  margin-left:0px;
+  margin-right:0px;
 }
 .sf-menu li {
 	white-space: nowrap; /* no need for Supersubs plugin */
@@ -2852,6 +2860,8 @@ opacity: 0.7
 .share.top{
   float:right;
   margin: 0px 0px 0px;
+  position: absolute;
+  right: 0px;
 }
 .share.top li {
   margin-left: 0px;
@@ -3108,9 +3118,20 @@ opacity: 0.7
   position: relative;
   display: inline-block;
 }
-.single-share > a {
+.single-format-standard .single-share > a {
   display: inline-block;
 }
+.post-style-4 .single-share,
+.post-style-4 .single-share > a,
+.single-share > a,
+.single-share  {
+  display: block;
+}
+.post-style-5 .single-cat-wrap {
+  text-align: center;
+}
+
+
 .single-share img {
   width: 100%;
 }
@@ -3562,7 +3583,9 @@ opacity: 0.7
     width: 66%;
     margin: 0 auto;
   }
-  .boxed-layout-on .mt-outer-wrap {
+  .boxed-layout-on .mt-outer-wrap,
+  .boxed-layout-on .fixed-top,
+  .boxed-layout-on .header-wrap {
     margin: 0 auto;
     width: 1210px;
   }
@@ -3579,7 +3602,9 @@ opacity: 0.7
 }
 
 @media (min-width: 1440px) {
-  .boxed-layout-on .mt-outer-wrap{
+  .boxed-layout-on .mt-outer-wrap,
+  .boxed-layout-on .fixed-top,
+  .boxed-layout-on .header-wrap{
     width: 1340px;
   }
 
@@ -3589,6 +3614,8 @@ opacity: 0.7
 }
 
 @media (min-width: 1460px) {
+  .boxed-layout-on .fixed-top,
+  .boxed-layout-on .header-wrap,
   .boxed-layout-on .mt-outer-wrap{
     width: 1360px;
   }
@@ -3596,6 +3623,13 @@ opacity: 0.7
 
 
 @media all and (max-width: 1199px) {
+  .share.top{
+    float:none;
+    clear: both;
+    padding: 20px 0px 0px;
+    display: block;
+    position: relative;
+  }
 
   .poster.trending-carousel {
     width: 450px;
@@ -3650,13 +3684,6 @@ opacity: 0.7
   .socials a span {
     font-size: 14px;
   }
-  .post-style-7 .single-media,
-  .post-style-7 .single-media-wrap {
-    height: 500px;
-  }
-  .post-style-8 .single-media-top {
-    height: 500px;
-  }
   .top-ad {
     width: 600px;
   }
@@ -3690,6 +3717,7 @@ opacity: 0.7
 }
 
 @media all and (max-width: 991px) {
+
   .head-logo {
     text-align: center;
   }
@@ -3756,13 +3784,7 @@ opacity: 0.7
   .post-style-7 .after-title {
     margin-bottom: 0px;
   }
-  .post-style-7 .share.top {
-    margin: 0px 0px 0px;
-    display: block;
-    float: none;
-    clear: both;
-    padding-top: 20px;
-  }
+
   .post-style-7 .single-image-gradient:before {
     height: 100%;
     background: -moz-linear-gradient(top,rgba(0, 0, 0, 0.37) 0%,rgba(0,0,0,.66) 100%);
@@ -3910,18 +3932,8 @@ opacity: 0.7
     font-size: 21px;
   }
 
-  .post-style-7 .single-media,
-  .post-style-7 .single-media-wrap {
-    height: 350px;
-  }
-
-  .post-style-8 .single-media-top {
-    height: 300px;
-  }
-
 
   .head-nav a spans,
-  .share.top,
   .share.down {
     display: none !important;
   }
@@ -4087,7 +4099,8 @@ opacity: 0.7
   .share li.share-twitter a:before {
     margin-left: -22px;
   }
-  .socials a span{ul.share li span
+  .socials a span{
+    ul.share li span
     font-size: 12px;
   }
   .social-text {

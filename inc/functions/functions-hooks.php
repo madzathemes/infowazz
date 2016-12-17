@@ -1,7 +1,7 @@
 <?php
 function infowazz_css() {
 
-	wp_enqueue_style('infowazz', get_stylesheet_uri());
+	wp_enqueue_style('infowazz-style', get_stylesheet_uri());
 
 	$custom_styles = '';
 	$options = get_option("infowazz_theme_options");
@@ -110,10 +110,11 @@ function infowazz_header_script() {
 		wp_enqueue_script( 'infowazz_script', get_template_directory_uri(). '/inc/js/scripts.js', array( 'jquery'), '', true );
 		wp_localize_script( 'infowazz_script', 'ajax_posts', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'noposts' => esc_html__('No older posts found', 'infowazz'), ));
 
-		wp_enqueue_script('infowazz_html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'infowazz_html5shiv', 'conditional', 'lt IE 9' );
-		wp_enqueue_script('infowazz_respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'infowazz_respondmin', 'conditional', 'lt IE 9' );
+		// Third party scripts/ styles don't need to be prefixed to avoid double loading
+		wp_enqueue_script('jquery-html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'jquery-_html5shiv', 'conditional', 'lt IE 9' );
+		wp_enqueue_script('jquery-respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'jquery-respondmin', 'conditional', 'lt IE 9' );
 
 
     function infowazz_fonts_url() {
