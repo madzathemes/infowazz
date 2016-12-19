@@ -3500,7 +3500,7 @@ opacity: 0.7
     -moz-transform: translate(0,60px); /** Firefox **/
     right: 20px;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
 }
 .footer-scroll-to-top.active {
   -webkit-backface-visibility: hidden;
@@ -3777,12 +3777,11 @@ opacity: 0.7
   .hide-mobile,
   .nav,
   .single-top,
-  .footer-nav,
-  .post-style-7 .single-subtitle {
+  .footer-nav{
     display: none !important;
   }
   .post-style-7 .after-title {
-    margin-bottom: 0px;
+    margin-bottom: 40px;
   }
 
   .post-style-7 .single-image-gradient:before {
@@ -3933,8 +3932,7 @@ opacity: 0.7
   }
 
 
-  .head-nav a spans,
-  .share.down {
+  .head-nav a spans {
     display: none !important;
   }
   .post-style-7 .after-title {
@@ -4062,6 +4060,22 @@ opacity: 0.7
   .post-style-6 .author-img {
     display: none
   }
+  ul.share li span {
+    display: none;
+  }
+  .share li a {
+    padding: 7px 11px 35px 35px;
+  }
+  .share.down .share-more .pinterest:before,
+  .share.top .share-more .pinterest:before {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .share.down .share-more,
+  .share.top .share-more {
+    position: relative;
+    float:none;
+  }
 
 }
 @media all and (max-width: 445px) {
@@ -4092,9 +4106,6 @@ opacity: 0.7
     padding-bottom: 5px;
     padding-top: 5px;
   }
-  ul.share li span {
-    display: none;
-  }
   .share li a::before,
   .share li.share-twitter a:before {
     margin-left: -22px;
@@ -4109,34 +4120,7 @@ opacity: 0.7
   .fixed-top .share li.share-twitter a, .fixed-top .share li.share-facebook a {
     padding-right: 11px;
   }
-  .share li a {
-    padding: 7px 11px 35px 35px;
-  }
-  .share.down li a,
-  .share.top li a {
-    padding: 7px 11px 35px 35px;
-  }
-  .share.down .share-more .pinterest:before,
-  .share.top .share-more .pinterest:before {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .share.down .share-more a,
-  .share.top .share-more a {
-    position: absolute;
-    top: 40px;
-    float:none !important;
-    padding: 10px 0px 0px 0px;
-  }
-  .share.down .share-more a:first-child,
-  .share.top .share-more a:first-child {
-    top: 90px!important;
-  }
-  .share.down .share-more,
-  .share.top .share-more {
-    position: relative;
-    float:none;
-  }
+
 
 }
 @media all and (max-width: 400px) {
