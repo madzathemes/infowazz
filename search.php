@@ -11,11 +11,19 @@
 <div class="row">
 
 	<div class="col-md-8">
-		<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) :
 
-			<?php echo do_shortcode('[posts pagination=on type=normal-right ]');?>
+			if ( shortcode_exists( 'posts' ) ) {
 
-		<?php else : ?>
+				echo do_shortcode('[posts pagination=on type=normal-right ]');
+
+			} else {
+
+ 				get_template_part( 'content', get_post_format() );
+
+			}
+
+			else : ?>
 						<div id="post-0" class="post no-results not-found">
 							<h2 class="entry-title"><?php esc_html_e( 'Nothing Found', 'infowazz'  ); ?></h2>
 							<div class="entry-content">

@@ -51,10 +51,10 @@ function infowazz_css() {
 	 // Background Color
 	 $style = get_post_meta(get_the_ID(), "magazin_background_color", true);
 	 if(!empty($style)){
-	 		$custom_styles .='body { background-color: '. esc_attr($default_color) .' }';
+	 		$custom_styles .='.boxed-layout-on { background-color: '. esc_attr($default_color) .' }';
 	 }
 	 else if (!empty($options['background_color'])) {
-	 		$custom_styles .='body { background-color: '. esc_attr($options['background_color']) .'; }';
+	 		$custom_styles .='.boxed-layout-on { background-color: '. esc_attr($options['background_color']) .'; }';
 	 }
 
 	 // Logo Margin
@@ -96,7 +96,7 @@ function infowazz_css() {
 
 	 if ( $custom_styles != '' ) {
 	  $css = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $custom_styles);
-		wp_add_inline_style( 'infowazz', $css );
+		wp_add_inline_style( 'infowazz-style', $css );
 	}
 
 }
