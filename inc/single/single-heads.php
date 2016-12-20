@@ -46,11 +46,12 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       </div>
     </div>
 
-
+    <?php if(class_exists('md_walker')) { ?>
     <div class="post-statistic pull-left">
       <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
       <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
     </div>
+    <?php } ?>
     <div class="single-stat-comments">
       <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> Comments</span><?php } ?>
     </div>
