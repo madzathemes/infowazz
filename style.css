@@ -3038,7 +3038,8 @@ opacity: 0.7
   float: left;
 }
 .author-info {
-  margin-left: 40px
+  margin-left: 40px;
+  padding-right: 40px;
 }
 .author-description h2 {
   font-size: 24px!important;
@@ -3063,7 +3064,7 @@ opacity: 0.7
   display: block;
 }
 .stat-shares {
-  padding: 8px 20px 10px 50px;
+  padding: 8px 20px 10px 20px;
   font-size: 18px;
   display: inline-block;
   color: #a5ce27;
@@ -3078,7 +3079,7 @@ opacity: 0.7
     color: #a5ce27;
 }
 .stat-views {
-  padding: 8px 10px 10px 15px;
+  padding: 8px 10px 10px 20px;
   font-size: 18px;
   display: inline-block;
   color: #ff0036;
