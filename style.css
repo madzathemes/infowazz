@@ -2072,6 +2072,7 @@ h2.heading span {
 }
 .poster-comments {
   padding: 0px 0px 0px 15px;
+  display: none!important;
 }
 .poster-comments:before {
   content: "\6b";
