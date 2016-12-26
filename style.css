@@ -1217,7 +1217,8 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   content: "\e9a9";
   font-family: "madza";
   position: absolute;
-  margin-top: 20px;
+  top: 50%;
+  margin-top: -9px;
   font-size: 16px;
   left: 0px;
   color: #ff0036;
@@ -1453,10 +1454,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-up.fix-menu .header-wrap,
 .mt-fixed-disabled.fixed-on .header-wrap {
-  transform: translate(0,-105px);
-  -webkit-transform: translate(0,-105px); /** Safari & Chrome **/
-  -o-transform: translate(0,-105px); /** Opera **/
-  -moz-transform: translate(0,-105px); /** Firefox **/
+  transform: translate(0,-100%);
+  -webkit-transform: translate(0,-100%); /** Safari & Chrome **/
+  -o-transform: translate(0,-100%); /** Opera **/
+  -moz-transform: translate(0,-100%); /** Firefox **/
 }
 .mt-fixed-up.nav-down.fixed-on.header-top-on .header-wrap,
 .mt-fixed-always.fixed-on.header-top-on .header-wrap{
@@ -1480,13 +1481,14 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  background: white;
 }
 .fixed-top {
   -webkit-backface-visibility: hidden;
   height: 42px;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: -1;
   background: white;
   transform: translate(0,-130px);
   -webkit-transform: translate(0,-130px); /** Safari & Chrome **/
