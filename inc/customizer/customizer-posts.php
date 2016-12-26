@@ -2,12 +2,6 @@
 function infowazz_customize_posts($wp_customize){
 
 
-
-  $wp_customize->add_section('posts_default_settings', array(
-    'title'    	=> esc_html__('Posts', 'infowazz'),
-    'priority'       => 301,
-  ));
-
   Kirki::add_field( 'infowazz_theme_options[post_carousel]', array(
 	'type'        => 'switch',
 	'settings'    => 'infowazz_theme_options[post_carousel]',
@@ -55,12 +49,6 @@ function infowazz_customize_posts($wp_customize){
         '8' => get_template_directory_uri() . '/inc/img/post_style_8.png',
   	   ),
   ));
-
-
-
-
-
-
 
 }
 
