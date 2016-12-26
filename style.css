@@ -1501,10 +1501,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-down.fixed-on .fixed-top,
 .mt-fixed-always.fixed-on .fixed-top  {
-  transform: translate(0,60px);
-  -webkit-transform: translate(0,60px); /** Safari & Chrome **/
-  -o-transform: translate(0,60px); /** Opera **/
-  -moz-transform: translate(0,60px); /** Firefox **/
+  transform: translate(0,0px);
+  -webkit-transform: translate(0,0px); /** Safari & Chrome **/
+  -o-transform: translate(0,0px); /** Opera **/
+  -moz-transform: translate(0,0px); /** Firefox **/
 }
 .fixed-top .share  {
   margin-bottom: 0px;

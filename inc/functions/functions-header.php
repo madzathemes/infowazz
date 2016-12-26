@@ -26,8 +26,6 @@ else if(!empty($option['menu_background_width'])) {
 }
 ?>
 
-<?php	if(!empty( $option['menu_share'])){	infowazz_header_fixed();	} ?>
-
 <?php if  (!empty($optioz['header_ad_top'])) {  ?>
 	<div class="mt-t-ad">
 		<div class="mt-t-ad-in">
@@ -92,6 +90,7 @@ else if(!empty($option['menu_background_width'])) {
 			</div>
 		</div>
 	</div>
+	<?php	if(!empty( $option['menu_share'])){	infowazz_header_fixed();	} ?>
 </div>
 <div class="header-wrap-space"></div>
 <?php } add_filter('infowazz_header','infowazz_header');
