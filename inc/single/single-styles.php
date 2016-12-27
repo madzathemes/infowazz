@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
+      <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>" >
 
         <div class="row">
           <div class="col-md-12">
@@ -16,12 +16,12 @@
           <div class="col-md-12">
             <?php infowazz_single_social(); ?>
             <?php infowazz_single_media(); ?>
-            <div class="entry-content"><?php the_content(); ?></div>
+            <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
             <?php infowazz_single_bottom(); ?>
           </div>
         </div>
       </div>
-      <div class="col-md-4 pull-right <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-right <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -39,10 +39,10 @@
         <?php infowazz_single_cat(); ?>
         <?php infowazz_single_title(); ?>
         <?php infowazz_single_social(); ?>
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -58,10 +58,10 @@
         <?php infowazz_single_cat(); ?>
         <?php infowazz_single_title(); ?>
         <?php infowazz_single_social(); ?>
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -83,10 +83,10 @@
         <?php infowazz_single_cat(); ?>
         <?php infowazz_single_title(); ?>
         <?php infowazz_single_social(); ?>
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -112,10 +112,10 @@
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <?php infowazz_single_social(); ?>
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -147,10 +147,10 @@
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -187,10 +187,10 @@
     <div class="container">
       <div class="row">
         <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-          <div class="entry-content"><?php the_content(); ?></div>
+          <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
           <?php infowazz_single_bottom(); ?>
         </div>
-        <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+        <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
           <?php infowazz_single_sidebar(); ?>
         </div>
       </div>
@@ -219,10 +219,10 @@
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php infowazz_single_bottom(); ?>
       </div>
-      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+      <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php infowazz_single_sidebar(); ?>
       </div>
     </div>
@@ -246,10 +246,10 @@
 	<?php } ?>
   <div class="row">
     <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?> ">
-			<div class="entry-content"><?php the_content(); ?></div>
+			<div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
       <?php infowazz_single_bottom(); ?>
     </div>
-    <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar">
+    <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" temscope="itemscope" itemtype="http://schema.org/WPSideBar">
       <?php infowazz_single_sidebar(); ?>
     </div>
   </div>

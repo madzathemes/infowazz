@@ -1,4 +1,4 @@
-<div class="footer-wrap">
+<div class="footer-wrap" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 		<?php $optionz = get_option("magazin_theme_options");
 		if (!empty($optionz['article_ad_bottom'])) {  ?>
 			<div class="advertise text-center">

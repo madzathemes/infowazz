@@ -1107,9 +1107,9 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   width: 0%;
   display: inline-block;
   height: 20px;
-  margin-bottom: 0px;
+  margin-top: -10px;
   float: left;
-  bottom: 20px;
+  top: 50%;
   position: absolute;
   z-index: -1;
   background: yellow;
@@ -1167,7 +1167,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 /* HEAD LOGO */
 .head-logo {
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 /* HEAD NAV */

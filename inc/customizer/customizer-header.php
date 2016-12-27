@@ -136,7 +136,31 @@ function infowazz_customize_header($wp_customize){
     ),
   ) );
 
-	//  =============================
+  Kirki::add_field( 'mt_space_logo', array(
+  	'type'        => 'spacing',
+  	'settings'    => 'mt_space_logo',
+  	'label'       => __( 'Logo Padding', 'my_textdomain' ),
+  	'section'     => 'infowazz_logo_settings',
+  	'priority'    => 10,
+  	'default'     => array(
+  		'top'    => '20px',
+  		'bottom' => '20px',
+  	),
+  ) );
+  Kirki::add_field( 'mt_space_menu', array(
+    'type'        => 'spacing',
+    'settings'    => 'mt_space_menu',
+    'label'       => __( 'Menu Padding', 'my_textdomain' ),
+    'section'     => 'infowazz_logo_settings',
+    'priority'    => 10,
+    'default'     => array(
+      'top'    => '20px',
+      'bottom' => '20px',
+    ),
+  ) );
+
+
+	 //  =============================
     //  = Logo margin Top
     //  =============================
 

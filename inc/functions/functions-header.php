@@ -33,7 +33,7 @@ else if(!empty($option['menu_background_width'])) {
 		</div>
 	</div>
 <?php } ?>
-<div class="header-wrap">
+<div class="header-wrap" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 	<?php if (!empty($option['header_top'])) { ?>
 		<div class="header-mt-container-wrap">
 			<div class="container mt-header-container">
@@ -70,7 +70,7 @@ else if(!empty($option['menu_background_width'])) {
 
 						<div class="head-logo" <?php if(!empty($option['logo_width'])) { ?>  style="width:<?php echo esc_attr($option['logo_width']); ?>" <?php } ?>><?php infowazz_logo(); ?></div>
 
-						<div class="nav  mt-radius">
+						<div class="nav mt-radius" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" >
 							<?php infowazz_nav(); ?>
 						</div>
 

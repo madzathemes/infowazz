@@ -12,8 +12,6 @@ function infowazz_customize_colors($wp_customize){
     'panel'  => 'colors_settings'
   ));
 
-
-
   $wp_customize->add_section('background_settings', array(
     'title'    	=> esc_html__('Background', 'infowazz'),
     'panel'  => 'colors_settings'
@@ -70,139 +68,183 @@ function infowazz_customize_colors($wp_customize){
 
 
 
-
   // MENU COLORS //
   $wp_customize->add_section('colors_menu', array(
-    'title'    	=> esc_html__('Menu Colors', 'infowazz'),
+    'title'    	=> esc_html__('Header & Menu Colors', 'infowazz'),
     'panel'  => 'colors_settings'
   ));
 
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_bg]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_bg]',
-    'label'       => esc_html__( 'Background', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_header', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_header',
+    'label'       => esc_attr__( 'Top Bar', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
     'priority'    => 1,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu]',
-    'label'       => esc_html__( 'Link', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 10,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_hover_text]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_hover_text]',
-    'label'       => esc_html__( 'Link Hover', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 11,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_hover]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_hover]',
-    'label'       => esc_html__( 'Link Hover Border', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 12,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_sub]',
-    'label'       => esc_html__( 'Sub Link', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 14,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_hover]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_sub_hover]',
-    'label'       => esc_html__( 'Sub Link Hover', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 15,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_background]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_sub_background]',
-    'label'       => esc_html__( 'Sub Link Background', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 14,
-  ));
-
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_sub_hover_background]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_sub_hover_background]',
-    'label'       => esc_html__( 'Sub Link Background Hover', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 15,
+    'choices'     => array(
+        'background'    => esc_attr__( 'Background', 'infowazz' ),
+        'link'   => esc_attr__( 'Link', 'infowazz' ),
+        'hover'  => esc_attr__( 'Hover', 'infowazz' ),
+    ),
+    'default'     => array(
+        'background'    => '',
+        'link'    => '',
+        'hover'    => ''
+    ),
   ));
 
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_button]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_button]',
-    'label'       => esc_html__( 'Small Menu Button Hover', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_bg', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_bg',
+    'label'       => esc_attr__( 'Menu Background', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 20,
+    'priority'    => 1,
+    'choices'     => array(
+        'in'    => esc_attr__( 'Background', 'infowazz' ),
+    ),
+    'default'     => array(
+        'in'    => '',
+    ),
   ));
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_button_background]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_button_background]',
-    'label'       => esc_html__( 'Small Menu Button Hover Background', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_link', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_link',
+    'label'       => esc_attr__( 'Menu Links', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 20,
+    'priority'    => 1,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Lines', 'infowazz' ),
+        'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
+        'border'  => esc_attr__( 'Border', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_hover'    => '',
+        'border'    => ''
+    ),
   ));
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_background]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_background]',
-    'label'       => esc_html__( 'Small Menu Background', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_link_sub', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_link_sub',
+    'label'       => esc_attr__( 'Menu Sub Links', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 21,
+    'priority'    => 1,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Lines', 'infowazz' ),
+        'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
+        'background'  => esc_attr__( 'Background', 'infowazz' ),
+        'background_hover'  => esc_attr__( 'Hover', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_hover'    => '',
+        'background'    => '',
+        'background_hover'    => '',
+    ),
   ));
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_link]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_link]',
-    'label'       => esc_html__( 'Small Menu Link', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_button', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_button',
+    'label'       => esc_attr__( 'Menu Smart Button', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 22,
+    'priority'    => 1,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Lines', 'infowazz' ),
+        'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
+        'background'  => esc_attr__( 'Background', 'infowazz' ),
+        'background_hover'  => esc_attr__( 'Hover', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_hover'    => '',
+        'background'    => '',
+        'background_hover'    => '',
+    ),
   ));
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_link_hover]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_link_hover]',
-    'label'       => esc_html__( 'Small Menu Link Hover', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_search', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_search',
+    'label'       => esc_attr__( 'Menu Search', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 23,
+    'priority'    => 1,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Text', 'infowazz' ),
+        'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
+        'background'  => esc_attr__( 'Background', 'infowazz' ),
+        'background_hover'  => esc_attr__( 'Hover', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_hover'    => '',
+        'background'    => '',
+        'background_hover'    => '',
+    ),
   ));
 
-  Kirki::add_field( 'infowazz_theme_options[colors_menu_small_text]', array(
-    'type'        => 'color',
-    'settings'    => 'infowazz_theme_options[colors_menu_small_text]',
-    'label'       => esc_html__( 'Small Menu Text', 'infowazz' ),
+  Kirki::add_field( 'mt_colors_menu_icon', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_icon',
+    'label'       => esc_attr__( 'Menu Social Icons', 'infowazz' ),
     'section'     => 'colors_menu',
     'option_type' => 'option',
-    'priority'    => 24,
+    'priority'    => 1,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Icon', 'infowazz' ),
+        'hover'   => esc_attr__( 'Hover', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'hover'    => '',
+    ),
+  ));
+
+  Kirki::add_field( 'mt_colors_header_mobile', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_header_mobile',
+    'label'       => esc_attr__( 'Mobile Header', 'infowazz' ),
+    'section'     => 'colors_menu',
+    'option_type' => 'option',
+    'priority'    => 1,
+    'choices'     => array(
+        'background'    => esc_attr__( 'Background', 'infowazz' ),
+        'link'   => esc_attr__( 'Text', 'infowazz' ),
+    ),
+    'default'     => array(
+        'background'    => '',
+        'link'    => '',
+    ),
+  ));
+
+
+  Kirki::add_field( 'mt_colors_menu_smart', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_menu_smart',
+    'label'       => esc_attr__( 'Smart Menu', 'infowazz' ),
+    'section'     => 'colors_menu',
+    'option_type' => 'option',
+    'priority'    => 100,
+    'choices'     => array(
+        'background'    => esc_attr__( 'Background', 'infowazz' ),
+        'link'   => esc_attr__( 'Link', 'infowazz' ),
+        'hover'  => esc_attr__( 'Hover', 'infowazz' ),
+        'out'  => esc_attr__( 'Out', 'infowazz' ),
+    ),
+    'default'     => array(
+        'background'    => '',
+        'link'    => '',
+        'hover'    => '',
+        'out'    => '',
+    ),
   ));
 
 
@@ -346,6 +388,72 @@ function infowazz_customize_colors($wp_customize){
       'settings' => 'infowazz_theme_options[colors_footer_social_background_hover]',
   )));
 
+  // MENU COLORS //
+  $wp_customize->add_section('colors_other', array(
+    'title'    	=> esc_html__('Other Colors', 'infowazz'),
+    'panel'  => 'colors_settings'
+  ));
+
+
+  Kirki::add_field( 'colors_post_share', array(
+    'type'        => 'multicolor',
+    'settings'    => 'colors_post_share',
+    'label'       => esc_attr__( 'Post Share Count', 'infowazz' ),
+    'section'     => 'colors_other',
+    'option_type' => 'option',
+    'priority'    => 100,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Text', 'infowazz' ),
+        'text_dark'   => esc_attr__( 'Photo bg', 'infowazz' ),
+        'icon'   => esc_attr__( 'Icon', 'infowazz' ),
+        'icon_dark'   => esc_attr__( 'Photo bg', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_dark'    => '',
+        'icon'    => '',
+        'icon_dark'    => '',
+    ),
+  ));
+  Kirki::add_field( 'colors_post_view', array(
+    'type'        => 'multicolor',
+    'settings'    => 'colors_post_view',
+    'label'       => esc_attr__( 'Post View Count', 'infowazz' ),
+    'section'     => 'colors_other',
+    'option_type' => 'option',
+    'priority'    => 100,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Text', 'infowazz' ),
+        'text_dark'   => esc_attr__( 'Photo bg', 'infowazz' ),
+        'icon'   => esc_attr__( 'Icon', 'infowazz' ),
+        'icon_dark'   => esc_attr__( 'Photo bg', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'text_dark'    => '',
+        'icon'    => '',
+        'icon_dark'    => '',
+    ),
+  ));
+
+  Kirki::add_field( 'mt_colors_cat', array(
+    'type'        => 'multicolor',
+    'settings'    => 'mt_colors_cat',
+    'label'       => esc_attr__( 'Post List Category', 'infowazz' ),
+    'section'     => 'colors_other',
+    'option_type' => 'option',
+    'priority'    => 100,
+    'choices'     => array(
+        'text'    => esc_attr__( 'Text', 'infowazz' ),
+        'background'   => esc_attr__( 'Background', 'infowazz' ),
+        'only_text'   => esc_attr__( 'Only Text', 'infowazz' ),
+    ),
+    'default'     => array(
+        'text'    => '',
+        'background'    => '',
+        'only_text'    => '',
+    ),
+  ));
 
 
 
