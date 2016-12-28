@@ -117,14 +117,16 @@ function infowazz_customize_colors($wp_customize){
     'option_type' => 'option',
     'priority'    => 1,
     'choices'     => array(
-        'text'    => esc_attr__( 'Lines', 'infowazz' ),
+        'text'    => esc_attr__( 'Links', 'infowazz' ),
         'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
-        'border'  => esc_attr__( 'Border', 'infowazz' ),
+        'border'  => esc_attr__( 'Background', 'infowazz' ),
+        'bold'  => esc_attr__( 'Bold', 'infowazz' ),
     ),
     'default'     => array(
         'text'    => '',
         'text_hover'    => '',
-        'border'    => ''
+        'border'    => '',
+        'bold'    => ''
     ),
   ));
 
