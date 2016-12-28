@@ -566,6 +566,19 @@ function infowazz_customize_header($wp_customize){
          '2' => esc_attr__( 'Disable', 'infowazz' ),
        ),
    ) );
+   Kirki::add_field( 'infowazz_theme_options[header_top_follower]', array(
+       'type'        => 'switch',
+       'settings'    => 'infowazz_theme_options[header_top_count]',
+       'label'       => esc_attr__( 'Header Top Follower Count', 'infowazz' ),
+       'section'     => 'infowazz_header_top',
+       'default'     => 'on',
+       'option_type' => 'option',
+       'priority'    => 10,
+       'choices'     => array(
+         'on'  => esc_attr__( 'On', 'infowazz' ),
+         'off' => esc_attr__( 'Off', 'infowazz' ),
+       ),
+   ) );
 
    Kirki::add_field( 'infowazz_theme_options[menu_share]', array(
     'type'        => 'switch',
