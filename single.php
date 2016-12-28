@@ -29,7 +29,7 @@ if ($carousel == "yes"){ ?>
 }
 ?>
 
-<article itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<article itemscope itemtype="http://schema.org/Article">
 
 <?php while ( have_posts() ) : the_post();
 
@@ -92,6 +92,21 @@ if ($carousel == "yes"){ ?>
 
 endwhile;
 ?>
+
+<div class="hidde" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+	<meta itemprop="url" content="<?php echo get_the_post_thumbnail_url(get_the_ID(),"large"); ?>">
+	<meta itemprop="width" content="1200"><meta itemprop="height" content="801">
+</div>
+<div class="hidde" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+	<div class="hidde" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+	<?php $option = get_option("infowazz_theme_options"); ?>
+	<?php if(!empty($option['header_logo'])) { ?><meta itemprop="url" content="<?php echo esc_url($option['header_logo']); ?>"><?php } ?>
+	<?php if(!empty($option['logo_width'])) { ?><meta itemprop="width" content="<?php echo esc_attr($option['logo_width']); ?>"><?php } ?>
+	<?php if(!empty($option['logo_height'])) { ?><meta itemprop="height" content="<?php echo esc_attr($option['logo_height']); ?>"><?php } ?>
+	</div>
+	<?php if(!empty(get_option("mt_shema_publisher"))) { ?><meta itemprop="name" content="<?php echo esc_attr(get_option("mt_shema_publisher")); ?>"><?php } ?>
+</div>
+</article>
 
 </article>
 
