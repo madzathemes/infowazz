@@ -43,9 +43,11 @@ else if(!empty($option['menu_background_width'])) {
 							<div class="pull-left mt-top-social">
 								<?php infowazz_socials(); ?>
 							</div>
+							<?php if ( true == get_theme_mod( 'mt_top_follower', true ) ) { ?>
 							<div class="mt-top-followers pull-left mt-top-share">
-								<strong><?php esc_html_e( '15k', 'infowazz' ); ?></strong> <span><?php esc_html_e( 'Followers', 'infowazz' ); ?></span>
+								<strong></strong> <span><?php esc_html_e( 'Followers', 'infowazz' ); ?></span>
 							</div>
+							<?php } ?>
 							<div class="pull-right mt-top-menu">
 								<?php infowazz_top_menu(); ?>
 							</div>

@@ -46,6 +46,11 @@ function hasScrolled() {
 jQuery(document).ready(function() {
   'use strict';
 
+  var head = (jQuery('.header-wrap').outerHeight());
+  jQuery('.header-wrap-space').css({
+      'height' : head + 'px'
+  });
+
   jQuery(".nav-search-wrap, .nav-search").on("click",function() {
     jQuery('.header-menu, .mt-header-mobile').addClass("active");
   });
@@ -121,7 +126,8 @@ jQuery(document).ready(function() {
   var youtube = jQuery( ".mt-f-data>div" ).data( "youtube" );
   var token = jQuery( ".mt-f-data>div" ).data( "token" );
 
-  jQuery.ajax({
+
+ jQuery.ajax({
     url: 'https://graph.facebook.com/'+facebook,
     dataType: 'json',
     type: 'GET',
@@ -129,7 +135,7 @@ jQuery(document).ready(function() {
     success: function(data) {
       var followers = parseInt(data.likes);
       var k = kFormatter(followers);
-      jQuery('.social-facebook .social-count').append(followers).digits();
+      jQuery('.social-facebook .social-count, .mt-top-followers strong').append(followers).digits();
 
     }
   });
@@ -140,7 +146,7 @@ jQuery(document).ready(function() {
     crossDomain : true,
     success: function(data) {
       var twitterfollowcount = data[0]['followers_count'];
-      jQuery('.social-twitter .social-count, .mt-top-followers strong').append(twitterfollowcount).digits();
+      jQuery('.social-twitter .social-count').append(twitterfollowcount).digits();
     }
   });
   jQuery.ajax({
@@ -154,16 +160,17 @@ jQuery(document).ready(function() {
       jQuery('.social-subscribe .social-count').append(subscribers).digits();
     }
   });
-  //Function to add commas to the thousandths
-  jQuery.fn.digits = function(){
-    return this.each(function(){
-      jQuery(this).text( jQuery(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') );
-    })
-  }
-  //Function to add K to thousands
-  function kFormatter(num) {
-    return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
-  }
+
+    //Function to add commas to the thousandths
+    jQuery.fn.digits = function(){
+      return this.each(function(){
+        jQuery(this).text( jQuery(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') );
+      })
+    }
+    //Function to add K to thousands
+    function kFormatter(num) {
+      return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
+    }
 
 
 });

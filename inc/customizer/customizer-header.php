@@ -136,7 +136,7 @@ function infowazz_customize_header($wp_customize){
     ),
   ) );
 
-  Kirki::add_field( 'mt_space_logo', array(
+/*  Kirki::add_field( 'mt_space_logo', array(
   	'type'        => 'spacing',
   	'settings'    => 'mt_space_logo',
   	'label'       => __( 'Logo Padding', 'my_textdomain' ),
@@ -157,7 +157,7 @@ function infowazz_customize_header($wp_customize){
       'top'    => '20px',
       'bottom' => '20px',
     ),
-  ) );
+  ) ); */
 
 
 	 //  =============================
@@ -566,13 +566,12 @@ function infowazz_customize_header($wp_customize){
          '2' => esc_attr__( 'Disable', 'infowazz' ),
        ),
    ) );
-   Kirki::add_field( 'infowazz_theme_options[header_top_follower]', array(
+   Kirki::add_field( 'mt_top_follower', array(
        'type'        => 'switch',
-       'settings'    => 'infowazz_theme_options[header_top_count]',
+       'settings'    => 'mt_top_follower',
        'label'       => esc_attr__( 'Header Top Follower Count', 'infowazz' ),
        'section'     => 'infowazz_header_top',
        'default'     => 'on',
-       'option_type' => 'option',
        'priority'    => 10,
        'choices'     => array(
          'on'  => esc_attr__( 'On', 'infowazz' ),
