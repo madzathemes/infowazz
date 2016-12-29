@@ -1807,7 +1807,7 @@ h2.heading span {
 .poster.size-normal .poster-info {
   display: inline-block;
   margin-left: 25px;
-  padding: 0 6px 6px;
+  padding: 0 2px 3px;
 }
 .size-normal .poster-data {
   margin-top: 10px;
@@ -1911,6 +1911,9 @@ h2.heading span {
   background: yellow;
   color: #222;
   padding: 2px 4px;
+}
+.size-normal .poster-cat span {
+  padding: 0px !important;
 }
 .poster-data {
   display: inline;
