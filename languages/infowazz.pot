@@ -4,7 +4,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Text in function
-#: infowazz/inc/functions/functions-comment.php:101
+#: infowazz/inc/functions/functions-comment.php:88
 msgid " Edit"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgid "<span class=\"meta-nav\">&larr; Older posts</span> "
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:31
+#: infowazz/comments.php:30
 #: infowazz/comments.php:49
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr ""
@@ -75,19 +75,13 @@ msgid "<span class=\"meta-nav\">Newer posts  &rarr;</span>"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/single/single-content.php:26
+#: infowazz/inc/single/single-content.php:43
 msgid "About %s"
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/functions/functions-footer.php:16
-#: infowazz/inc/customizer/customizer-footer.php:15
 msgid "About Us"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "Add menu widgets inside small menu columns"
 msgstr ""
 
 #. Text in function
@@ -101,13 +95,18 @@ msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
 #. Text in echo
-#: infowazz/tag.php:25
+#: infowazz/tag.php:28
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-ads.php:1
 msgid "Article bottom ad"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/functions/functions-widget.php:1
+msgid "Author Page Sidebar"
 msgstr ""
 
 #. Text in function
@@ -126,16 +125,6 @@ msgid "Background Image"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Background Left"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Background Right"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Background color"
 msgstr ""
@@ -146,13 +135,13 @@ msgid "Blog/Category Sidebar"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/functions/functions-comment.php:1
-msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Bold"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Border"
+#: infowazz/inc/functions/functions-comment.php:1
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
 #. Text in function
@@ -176,11 +165,6 @@ msgid "Bottom Footer Text"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Boxed"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Button: Hot Posts"
 msgstr ""
@@ -201,19 +185,14 @@ msgid "Button: Trending Posts"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Cancel reply"
 msgstr ""
 
 #. Text in function
-#: infowazz/category.php:50
-#: infowazz/category.php:57
+#: infowazz/category.php:52
+#: infowazz/category.php:59
 msgid "Category"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Colors"
 msgstr ""
 
 #. Text in function
@@ -287,8 +266,8 @@ msgid "Default: 40"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-header.php:1
 #: infowazz/inc/customizer/customizer-posts.php:1
+#: infowazz/inc/customizer/customizer-header.php:1
 msgid "Disable"
 msgstr ""
 
@@ -318,13 +297,13 @@ msgid "Edit"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Email"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-header.php:1
 #: infowazz/inc/customizer/customizer-posts.php:1
+#: infowazz/inc/customizer/customizer-header.php:1
 msgid "Enable"
 msgstr ""
 
@@ -344,9 +323,23 @@ msgid "Featured Post"
 msgstr ""
 
 #. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Fixed Header"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Fixed Share Buttons"
+msgstr ""
+
+#. Text in function
 #: infowazz/inc/functions/functions-footer.php:21
-#: infowazz/inc/customizer/customizer-footer.php:15
 msgid "Follow Us"
+msgstr ""
+
+#. Text in echo
+#: infowazz/inc/functions/functions-header.php:48
+msgid "Followers"
 msgstr ""
 
 #. Text in function
@@ -380,11 +373,6 @@ msgid "Footer Settings"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-footer.php:15
-msgid "Footer e-mail"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-ads.php:1
 msgid "Footer top ad"
 msgstr ""
@@ -396,12 +384,7 @@ msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Full Width"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "General Colors"
+msgid "General"
 msgstr ""
 
 #. Text in function
@@ -440,14 +423,19 @@ msgid "H6 size (px)"
 msgstr ""
 
 #. Text in echo
+#: infowazz/inc/functions/functions-header.php:105
 #: infowazz/inc/functions/functions-footer.php:95
-#: infowazz/inc/functions/functions-header.php:126
 msgid "HOT"
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Header"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Header & Menu Colors"
 msgstr ""
 
 #. Text in function
@@ -471,13 +459,13 @@ msgid "Header Button URL"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Header Objects"
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Header Top"
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
-msgid "Header Top"
+msgid "Header Top Follower Count"
 msgstr ""
 
 #. Text in function
@@ -488,6 +476,16 @@ msgstr ""
 #. Text in function
 #: infowazz/inc/functions/functions-general.php:95
 msgid "Home"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Hover"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Icon"
 msgstr ""
 
 #. Text in function
@@ -511,8 +509,8 @@ msgid "Installing Plugin: %s"
 msgstr ""
 
 #. Text in echo
+#: infowazz/inc/functions/functions-header.php:103
 #: infowazz/inc/functions/functions-footer.php:93
-#: infowazz/inc/functions/functions-header.php:124
 msgid "LATEST"
 msgstr ""
 
@@ -522,13 +520,18 @@ msgid "Layouts"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Leave a Comment"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Leave a Reply to %s"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Lines"
 msgstr ""
 
 #. Text in function
@@ -537,23 +540,18 @@ msgid "Link"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Link Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Link Hover Background"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-footer.php:15
 msgid "LinkedIn icon link"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
-msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Links"
+msgstr ""
+
+#. Text in function
+#: infowazz/comments.php:125
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\" class=\"mt-theme-text\">Log out?</a>"
 msgstr ""
 
 #. Text in function
@@ -578,22 +576,7 @@ msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Menu Colors"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "Menu Column 1"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "Menu Column 2"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "Menu Column 3"
+msgid "Menu Background"
 msgstr ""
 
 #. Text in function
@@ -603,7 +586,32 @@ msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Menu Style"
+msgid "Menu Links"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Menu Search"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Menu Smart Button"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Menu Social Icons"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Menu Sub Links"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Mobile Header"
 msgstr ""
 
 #. Text in function
@@ -667,7 +675,7 @@ msgid "Mobile Menu Title"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Name"
 msgstr ""
 
@@ -682,7 +690,7 @@ msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/single/single-content.php:46
+#: infowazz/inc/single/single-content.php:63
 msgid "Next article"
 msgstr ""
 
@@ -696,10 +704,25 @@ msgstr ""
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
+#. Text in function
+#: infowazz/inc/functions/functions-hooks.php:1
+msgid "No older posts found"
+msgstr ""
+
 #. Text in echo
-#: infowazz/tag.php:21
-#: infowazz/search.php:20
+#: infowazz/tag.php:24
+#: infowazz/search.php:28
 msgid "Nothing Found"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Off"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "On"
 msgstr ""
 
 #. Text in function
@@ -708,13 +731,33 @@ msgid "On/Off"
 msgstr ""
 
 #. Text in function
+#: infowazz/inc/functions/functions-plugins.php:1
+msgid "One Click Demo Import"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Only Text"
+msgstr ""
+
+#. Text in function
 #: infowazz/inc/customizer/customizer-footer.php:15
 msgid "Open in new page"
 msgstr ""
 
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Other Colors"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Out"
+msgstr ""
+
 #. Text in echo
+#: infowazz/inc/functions/functions-header.php:104
 #: infowazz/inc/functions/functions-footer.php:94
-#: infowazz/inc/functions/functions-header.php:125
 msgid "POPULAR"
 msgstr ""
 
@@ -751,6 +794,11 @@ msgstr ""
 #. Text in function
 #: infowazz/content.php:39
 msgid "Permalink to %s"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Photo bg"
 msgstr ""
 
 #. Text in echo
@@ -794,6 +842,16 @@ msgid "Post Carousel"
 msgstr ""
 
 #. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Post List Category"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Post Share Count"
+msgstr ""
+
+#. Text in function
 #: infowazz/inc/functions/functions-widget.php:1
 msgid "Post Sidebar"
 msgstr ""
@@ -803,32 +861,31 @@ msgstr ""
 msgid "Post Style"
 msgstr ""
 
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Post View Count"
+msgstr ""
+
 #. Text in echo
+#: infowazz/inc/functions/functions-header.php:103
+#: infowazz/inc/functions/functions-header.php:104
+#: infowazz/inc/functions/functions-header.php:105
+#: infowazz/inc/functions/functions-header.php:106
 #: infowazz/inc/functions/functions-footer.php:93
 #: infowazz/inc/functions/functions-footer.php:94
 #: infowazz/inc/functions/functions-footer.php:95
 #: infowazz/inc/functions/functions-footer.php:96
-#: infowazz/inc/functions/functions-header.php:124
-#: infowazz/inc/functions/functions-header.php:125
-#: infowazz/inc/functions/functions-header.php:126
-#: infowazz/inc/functions/functions-header.php:127
-#: infowazz/inc/customizer/customizer-posts.php:1
 msgid "Posts"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/single/single-content.php:45
+#: infowazz/inc/single/single-content.php:62
 msgid "Previous article"
 msgstr ""
 
-#. Text in echo
-#: infowazz/inc/functions/functions-header.php:99
-msgid "Random"
-msgstr ""
-
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Random Button Hover Backgrond"
+#: infowazz/inc/single/single-content.php:10
+msgid "Read More:"
 msgstr ""
 
 #. Text in function
@@ -887,11 +944,6 @@ msgid "Sample: 72"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Search Backgrond"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Search Button"
 msgstr ""
@@ -907,20 +959,30 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Search Text"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-footer.php:15
 msgid "Settings"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/functions/functions-header.php:264
-#: infowazz/inc/single/single-heads.php:53
-#: infowazz/inc/single/single-content.php:9
+#: infowazz/inc/functions/functions-header.php:216
+#: infowazz/inc/single/single-heads.php:61
+#: infowazz/inc/single/single-content.php:25
 msgid "Share on Facebook"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/single/single-heads.php:52
+msgid "Shares"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Show Always"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-header.php:1
+msgid "Show When Scroll Up"
 msgstr ""
 
 #. Text in function
@@ -954,38 +1016,13 @@ msgid "Skype icon link"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Background"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Button Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Button Hover Background"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Small Menu For Desktop"
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Link"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Link Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Text"
+msgid "Smart Menu"
 msgstr ""
 
 #. Text in function
@@ -1014,74 +1051,44 @@ msgid "Social Icons"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Social Widget Hover"
-msgstr ""
-
-#. Text in function
 #: infowazz/all_plugins/class-tgm-plugin-activation.php:1
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #. Text in echo
-#: infowazz/search.php:22
+#: infowazz/search.php:30
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr ""
 
 #. Text in function
 #: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link"
+msgid "Style"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Background"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Background Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Link"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Background"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Background Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Hover"
-msgstr ""
-
-#. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Submit Comment"
 msgstr ""
 
 #. Text in echo
+#: infowazz/inc/functions/functions-header.php:106
 #: infowazz/inc/functions/functions-footer.php:96
-#: infowazz/inc/functions/functions-header.php:127
 msgid "TRENDING"
 msgstr ""
 
 #. Text in function
-#: infowazz/tag.php:15
+#: infowazz/tag.php:18
 msgid "Tag"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Text"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/functions/functions-widget.php:1
+msgid "The Author page sidebar widget area"
 msgstr ""
 
 #. Text in function
@@ -1130,13 +1137,18 @@ msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
 #. Text in echo
-#: infowazz/comments.php:10
+#: infowazz/comments.php:9
 msgid "This post is password protected. Enter the password to view and post comments."
 msgstr ""
 
 #. Text in echo
 #: infowazz/searchform.php:2
 msgid "To search type and hit enter"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/customizer/customizer-colors.php:1
+msgid "Top Bar"
 msgstr ""
 
 #. Text in function
@@ -1155,29 +1167,19 @@ msgid "Top Footer Link Hover"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Text"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Title"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-header.php:1
 msgid "Top Space"
 msgstr ""
 
 #. Text in echo
-#: infowazz/inc/single/single-sidebar.php:27
+#: infowazz/inc/single/single-sidebar.php:26
 msgid "Trending Posts"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/functions/functions-header.php:265
-#: infowazz/inc/single/single-heads.php:54
-#: infowazz/inc/single/single-content.php:10
+#: infowazz/inc/functions/functions-header.php:217
+#: infowazz/inc/single/single-heads.php:62
+#: infowazz/inc/single/single-content.php:26
 msgid "Tweet on Twitter"
 msgstr ""
 
@@ -1187,8 +1189,7 @@ msgid "Twitter icon link"
 msgstr ""
 
 #. Text in echo
-#: infowazz/inc/functions/functions-header.php:41
-#: infowazz/inc/functions/functions-header.php:108
+#: infowazz/inc/functions/functions-header.php:84
 msgid "Type and hit enter to search ..."
 msgstr ""
 
@@ -1223,10 +1224,15 @@ msgid "Upload Responsive Logo (x2)"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/functions/functions-general.php:26
 #: infowazz/inc/functions/functions-comment.php:1
-#: infowazz/inc/single/single-content.php:30
+#: infowazz/inc/single/single-content.php:47
+#: infowazz/inc/functions/functions-general.php:26
 msgid "View all posts by %s"
+msgstr ""
+
+#. Text in function
+#: infowazz/inc/single/single-heads.php:53
+msgid "Views"
 msgstr ""
 
 #. Text in function
@@ -1235,7 +1241,7 @@ msgid "Vimeo icon link"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "Website"
 msgstr ""
 
@@ -1245,37 +1251,17 @@ msgid "Width"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "WooCommerce Sidebar"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "WooCommerce Single Sidebar"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "WooCommerce Single sidebar area"
-msgstr ""
-
-#. Text in function
-#: infowazz/inc/functions/functions-widget.php:1
-msgid "WooCommerce sidebar area"
-msgstr ""
-
-#. Text in function
 #: infowazz/inc/customizer/customizer-ads.php:1
 msgid "YOUR AD CODE"
 msgstr ""
 
 #. Text in function
-#: infowazz/inc/single/single-content.php:50
+#: infowazz/inc/single/single-content.php:68
 msgid "You may be interested"
 msgstr ""
 
 #. Text in function
-#: infowazz/comments.php:124
+#: infowazz/comments.php:125
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 

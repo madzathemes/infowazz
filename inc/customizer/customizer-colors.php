@@ -85,11 +85,13 @@ function infowazz_customize_colors($wp_customize){
         'background'    => esc_attr__( 'Background', 'infowazz' ),
         'link'   => esc_attr__( 'Link', 'infowazz' ),
         'hover'  => esc_attr__( 'Hover', 'infowazz' ),
+        'bold'  => esc_attr__( 'Bold', 'infowazz' ),
     ),
     'default'     => array(
         'background'    => '',
         'link'    => '',
-        'hover'    => ''
+        'hover'    => '',
+        'bold'    => ''
     ),
   ));
 
