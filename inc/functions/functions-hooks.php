@@ -94,6 +94,43 @@ function infowazz_css() {
 		}
 
 
+		// Other
+	$options_in = get_option("colors_post_view");
+	if(!empty($options_in['text'])){if($options_in['text']!='#fffff1'){
+		$custom_styles .='.post-statistic .stat-views { color:'. esc_attr($options_in['text']) .'!important; }';
+	}}
+	if(!empty($options_in['text_dark'])){if($options_in['text_dark']!='#fffff1'){
+		$custom_styles .='.post-bgphoto .post-statistic .stat-views { color:'. esc_attr($options_in['text_dark']) .'!important; }';
+	}}
+	if(!empty($options_in['icon'])){if($options_in['icon']!='#fffff1'){
+		$custom_styles .='.post-statistic .stat-views:before { color:'. esc_attr($options_in['icon']) .'!important; }';
+	}}
+	if(!empty($options_in['icon_dark'])){if($options_in['icon_dark']!='#fffff1'){
+		$custom_styles .='.post-bgphoto .post-statistic .stat-views:before { color:'. esc_attr($options_in['icon_dark']) .'!important; }';
+	}}
+	$options_in = get_option("colors_post_share");
+	if(!empty($options_in['text'])){if($options_in['text']!='#fffff1'){
+		$custom_styles .='.post-statistic .stat-shares { color:'. esc_attr($options_in['text']) .'!important; }';
+	}}
+	if(!empty($options_in['text_dark'])){if($options_in['text_dark']!='#fffff1'){
+		$custom_styles .='.post-bgphoto .post-statistic .stat-shares { color:'. esc_attr($options_in['text_dark']) .'!important; }';
+	}}
+	if(!empty($options_in['icon'])){if($options_in['icon']!='#fffff1'){
+		$custom_styles .='.post-statistic .stat-shares:before { color:'. esc_attr($options_in['icon']) .'!important; }';
+	}}
+	if(!empty($options_in['icon_dark'])){if($options_in['icon_dark']!='#fffff1'){
+		$custom_styles .='.post-bgphoto .post-statistic .stat-shares:before { color:'. esc_attr($options_in['icon_dark']) .'!important; }';
+	}}
+
+	$options_in = get_option("mt_colors_cat");
+	if(!empty($options_in['background'])){if($options_in['background']!='#fffff1'){
+		$custom_styles .='.df-is-megamenu ul .poster-cat, .poster-cat span, .grid-post .poster-cat span, .poster-large-cat span, .poster-info { background-color:'. esc_attr($options_in['background']) .'!important; }';
+	}}
+	if(!empty($options_in['text'])){if($options_in['text']!='#fffff1'){
+		$custom_styles .='.df-is-megamenu ul .poster-cat span, .poster-cat span, .grid-post .poster-cat span, .poster-large-cat span, .poster-info, .poster-info, .poster.size-normal .poster-cat span, .poster.trending-normal .poster-cat span, .poster.trending-carousel .poster-cat span { color:'. esc_attr($options_in['text']) .'!important; }';
+	}}
+
+
 	 if ( $custom_styles != '' ) {
 	  $css = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $custom_styles);
 		wp_add_inline_style( 'infowazz-style', $css );
@@ -177,12 +214,27 @@ function infowazz_class($classes) {
 		$body_class .= ' post-style-'.$style;
 		if($style=="8" and is_single()) {
 			$body_class .= ' boxed-layout-on';
+			$body_class .= ' post-bgphoto';
+		}
+		if($style=="7" and is_single()) {
+			$body_class .= ' post-bgphoto';
+		}
+		if($style=="6" and is_single()) {
+			$body_class .= ' post-bgphoto';
 		}
 	} else if (!empty($options['post_style'])) {
 		$body_class .= ' post-style-'.$options['post_style'];
 		if($options['post_style']=="8" and is_single()) {
 			$body_class .= ' boxed-layout-on';
+			$body_class .= ' post-bgphoto';
 		}
+		if($options['post_style']=="7" and is_single()) {
+			$body_class .= ' post-bgphoto';
+		}
+		if($options['post_style']=="6" and is_single()) {
+			$body_class .= ' post-bgphoto';
+		}
+
 	}
 
 	$layout = get_post_meta(get_the_ID(), "magazin_layout", true);

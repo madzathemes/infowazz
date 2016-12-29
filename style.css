@@ -1807,7 +1807,7 @@ h2.heading span {
 .poster.size-normal .poster-info {
   display: inline-block;
   margin-left: 25px;
-  padding: 0;
+  padding: 0 6px 6px;
 }
 .size-normal .poster-data {
   margin-top: 10px;

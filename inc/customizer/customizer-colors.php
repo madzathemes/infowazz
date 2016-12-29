@@ -450,12 +450,10 @@ function infowazz_customize_colors($wp_customize){
     'choices'     => array(
         'text'    => esc_attr__( 'Text', 'infowazz' ),
         'background'   => esc_attr__( 'Background', 'infowazz' ),
-        'only_text'   => esc_attr__( 'Only Text', 'infowazz' ),
     ),
     'default'     => array(
         'text'    => '',
         'background'    => '',
-        'only_text'    => '',
     ),
   ));
 
