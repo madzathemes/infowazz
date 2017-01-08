@@ -6,6 +6,8 @@
 
 get_header();
 
+if(function_exists('magazin_PostViews')){  magazin_PostViews(get_the_ID()); }
+
 $style = get_post_meta(get_the_ID(), "magazin_post_style", true);
 $option = get_option("infowazz_theme_options");
 $default = "";
@@ -104,7 +106,7 @@ endwhile;
 	<?php if(!empty($option['logo_width'])) { ?><meta itemprop="width" content="<?php echo esc_attr($option['logo_width']); ?>"><?php } ?>
 	<?php if(!empty($option['logo_height'])) { ?><meta itemprop="height" content="<?php echo esc_attr($option['logo_height']); ?>"><?php } ?>
 	</div>
-	<?php if(!empty(get_option("mt_shema_publisher"))) { ?><meta itemprop="name" content="<?php echo esc_attr(get_option("mt_shema_publisher")); ?>"><?php } ?>
+	<?php if(!empty(get_option("mt_shema_publisher"))) { $publisher = get_option("mt_shema_publisher"); ?><meta itemprop="name" content="<?php echo esc_attr($publisher); ?>"><?php } ?>
 </div>
 </article>
 

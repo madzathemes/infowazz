@@ -122,13 +122,11 @@ function infowazz_customize_colors($wp_customize){
         'text'    => esc_attr__( 'Links', 'infowazz' ),
         'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
         'border'  => esc_attr__( 'Background', 'infowazz' ),
-        'bold'  => esc_attr__( 'Bold', 'infowazz' ),
     ),
     'default'     => array(
         'text'    => '',
         'text_hover'    => '',
         'border'    => '',
-        'bold'    => ''
     ),
   ));
 
@@ -163,14 +161,10 @@ function infowazz_customize_colors($wp_customize){
     'choices'     => array(
         'text'    => esc_attr__( 'Lines', 'infowazz' ),
         'text_hover'   => esc_attr__( 'Hover', 'infowazz' ),
-        'background'  => esc_attr__( 'Background', 'infowazz' ),
-        'background_hover'  => esc_attr__( 'Hover', 'infowazz' ),
     ),
     'default'     => array(
         'text'    => '',
         'text_hover'    => '',
-        'background'    => '',
-        'background_hover'    => '',
     ),
   ));
 
@@ -192,40 +186,6 @@ function infowazz_customize_colors($wp_customize){
         'text_hover'    => '',
         'background'    => '',
         'background_hover'    => '',
-    ),
-  ));
-
-  Kirki::add_field( 'mt_colors_menu_icon', array(
-    'type'        => 'multicolor',
-    'settings'    => 'mt_colors_menu_icon',
-    'label'       => esc_attr__( 'Menu Social Icons', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 1,
-    'choices'     => array(
-        'text'    => esc_attr__( 'Icon', 'infowazz' ),
-        'hover'   => esc_attr__( 'Hover', 'infowazz' ),
-    ),
-    'default'     => array(
-        'text'    => '',
-        'hover'    => '',
-    ),
-  ));
-
-  Kirki::add_field( 'mt_colors_header_mobile', array(
-    'type'        => 'multicolor',
-    'settings'    => 'mt_colors_header_mobile',
-    'label'       => esc_attr__( 'Mobile Header', 'infowazz' ),
-    'section'     => 'colors_menu',
-    'option_type' => 'option',
-    'priority'    => 1,
-    'choices'     => array(
-        'background'    => esc_attr__( 'Background', 'infowazz' ),
-        'link'   => esc_attr__( 'Text', 'infowazz' ),
-    ),
-    'default'     => array(
-        'background'    => '',
-        'link'    => '',
     ),
   ));
 

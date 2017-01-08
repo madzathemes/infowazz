@@ -34,7 +34,7 @@ else if(!empty($option['menu_background_width'])) {
 	</div>
 <?php } ?>
 <div class="header-wrap" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-	<?php if (!empty($option['header_top'])) { ?>
+	<?php if ( true == get_theme_mod( 'mt_header_top', true ) ) {  ?>
 		<div class="header-mt-container-wrap">
 			<div class="container mt-header-container">
 				<div class="row">
@@ -64,7 +64,9 @@ else if(!empty($option['menu_background_width'])) {
 				<div class="col-md-12">
 					<div class="top-nav container-fluid">
 
-						<div class="nav-button mt-radius pointer  <?php if(empty($option['menu_small_on'])) { ?>hide-desktop<?php } ?>">
+
+
+						<div class="nav-button mt-radius pointer  <?php if ( false == get_theme_mod( 'mt_menu_small_on', true ) ) { echo "hide-desktop"; } ?>">
 							<div class="mt-m-cool-button">
 								<span class="mt-m-cool-button-line"></span>
 							</div>
@@ -76,7 +78,7 @@ else if(!empty($option['menu_background_width'])) {
 							<?php infowazz_nav(); ?>
 						</div>
 
-						<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
+						<?php if ( true == get_theme_mod( 'mt_menu_search', true ) ) { ?>
 							<div class="nav-search-wrap  mt-radius">
 								<div class="nav-search pointer"></div>
 								<div class="nav-search-input mt-radius">
@@ -86,13 +88,13 @@ else if(!empty($option['menu_background_width'])) {
 								</div>
 							</div>
 							<div class="search-close"></div>
-						<?php } } ?>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php	if(!empty( $option['menu_share'])){	infowazz_header_fixed();	} ?>
+	<?php	if ( true == get_theme_mod( 'mt_menu_share', true ) ) { infowazz_header_fixed();	} ?>
 </div>
 <div class="header-wrap-space"></div>
 <?php } add_filter('infowazz_header','infowazz_header');

@@ -25,12 +25,12 @@ if (class_exists('Kirki')) {
 if (!empty($share)){
 	$shares = $share+$shares;
 }
+$shares = number_format($shares);
 /* View Meta from Magazin framework */
 $view = get_post_meta(get_the_ID(), "magazin_view_count", true);
-$viewes = 1;
-if (!empty($view)){
-	$viewes = $view;
-}
+$views = get_post_meta(get_the_ID(), "magazin_post_views_count", true);
+$viewes = $views + "0";
+if (!empty($view)){ $viewes = $view + $views; $viewes = number_format($viewes); }
 
 $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
 
@@ -50,7 +50,7 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
     <?php if(class_exists('md_walker')) { ?>
     <div class="post-statistic pull-left">
       <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php echo esc_attr($viewes); ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
     </div>
     <?php } ?>
     <div class="single-stat-comments">

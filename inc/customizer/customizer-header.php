@@ -509,62 +509,45 @@ function infowazz_customize_header($wp_customize){
     ));
 
 
-   Kirki::add_field( 'infowazz_theme_options[header_link_blank]', array(
-      'type'        => 'switch',
-      'settings'    => 'infowazz_theme_options[header_link_blank]',
-      'label'       => esc_html__( 'Header Button Open In New Tap', 'infowazz' ),
-      'section'     => 'infowazz_header_top',
-      'default'     => '2',
-       'option_type' => 'option',
-      'priority'    => 10,
-      'choices'     => array(
-        '1'  => esc_attr__( 'Enable', 'infowazz' ),
-        '2' => esc_attr__( 'Disable', 'infowazz' ),
-      ),
-   ) );
-
-   Kirki::add_field( 'infowazz_theme_options[menu_small_on]', array(
+   Kirki::add_field( 'mt_menu_small_on', array(
      	'type'        => 'switch',
-     	'settings'    => 'infowazz_theme_options[menu_small_on]',
+     	'settings'    => 'mt_menu_small_on',
      	'label'       => esc_attr__( 'Small Menu For Desktop', 'infowazz' ),
      	'section'     => 'infowazz_header_top',
-     	'default'     => '0',
-      'option_type' => 'option',
+     	'default'     => 'on',
      	'priority'    => 10,
      	'choices'     => array(
-     		'1'  => esc_attr__( 'Enable', 'infowazz' ),
-     		'2' => esc_attr__( 'Disable', 'infowazz' ),
+     		'on'  => esc_attr__( 'On', 'infowazz' ),
+     		'off' => esc_attr__( 'Off', 'infowazz' ),
      	),
    ) );
 
 
 
-   Kirki::add_field( 'infowazz_theme_options[menu_search]', array(
+   Kirki::add_field( 'mt_menu_search', array(
        'type'        => 'switch',
-       'settings'    => 'infowazz_theme_options[menu_search]',
+       'settings'    => 'mt_menu_search',
        'label'       => esc_attr__( 'Search Button', 'infowazz' ),
        'section'     => 'infowazz_header_top',
-       'default'     => '0',
-       'option_type' => 'option',
+       'default'     => 'on',
        'priority'    => 10,
        'choices'     => array(
-         '1'  => esc_attr__( 'Enable', 'infowazz' ),
-         '2' => esc_attr__( 'Disable', 'infowazz' ),
-       ),
+      		'on'  => esc_attr__( 'On', 'infowazz' ),
+      		'off' => esc_attr__( 'Off', 'infowazz' ),
+      	),
    ) );
 
-   Kirki::add_field( 'infowazz_theme_options[header_top]', array(
+   Kirki::add_field( 'mt_header_top', array(
        'type'        => 'switch',
-       'settings'    => 'infowazz_theme_options[header_top]',
+       'settings'    => 'mt_header_top',
        'label'       => esc_attr__( 'Header Top', 'infowazz' ),
        'section'     => 'infowazz_header_top',
-       'default'     => '0',
-       'option_type' => 'option',
-       'priority'    => 10,
-       'choices'     => array(
-         '1'  => esc_attr__( 'Enable', 'infowazz' ),
-         '2' => esc_attr__( 'Disable', 'infowazz' ),
-       ),
+       'default'     => 'on',
+      	'priority'    => 10,
+      	'choices'     => array(
+      		'on'  => esc_attr__( 'On', 'infowazz' ),
+      		'off' => esc_attr__( 'Off', 'infowazz' ),
+      	),
    ) );
    Kirki::add_field( 'mt_top_follower', array(
        'type'        => 'switch',
@@ -579,17 +562,16 @@ function infowazz_customize_header($wp_customize){
        ),
    ) );
 
-   Kirki::add_field( 'infowazz_theme_options[menu_share]', array(
+   Kirki::add_field( 'mt_menu_share', array(
     'type'        => 'switch',
-    'settings'    => 'infowazz_theme_options[menu_share]',
+    'settings'    => 'mt_menu_share',
     'label'       => esc_attr__( 'Fixed Share Buttons', 'infowazz' ),
     'section'     => 'infowazz_header_top',
-    'default'     => '2',
-    'option_type' => 'option',
+    'default'     => 'on',
     'priority'    => 10,
     'choices'     => array(
-      '1'  => esc_attr__( 'Enable', 'infowazz' ),
-      '2' => esc_attr__( 'Disable', 'infowazz' ),
+      'on'  => esc_attr__( 'On', 'infowazz' ),
+      'off' => esc_attr__( 'Off', 'infowazz' ),
     ),
     ));
 
@@ -608,93 +590,6 @@ function infowazz_customize_header($wp_customize){
        'mt-fixed-disabled' => esc_attr__( 'Disable', 'infowazz' ),
      ),
      ));
-
-		// Latest Posts
-		$wp_customize->add_setting('infowazz_theme_options[url_latest]', array(
-			'capability' => 'edit_theme_options',
-			'type' => 'option',
-			'sanitize_callback' => 'esc_attr'
-		));
-		$wp_customize->add_control('infowazz_theme_options[url_latest]', array(
-			'label' => esc_html__('Button: Latest Posts', 'infowazz'),
-			'section' => 'infowazz_header_top',
-			'type' => 'dropdown-pages',
-			'settings' => 'infowazz_theme_options[url_latest]',
-			'priority'   => 2,
-		));
-
-		// Popular Posts
-		$wp_customize->add_setting('infowazz_theme_options[url_popular]', array(
-			'capability' => 'edit_theme_options',
-			'type' => 'option',
-			'sanitize_callback' => 'esc_attr'
-		));
-		$wp_customize->add_control('infowazz_theme_options[url_popular]', array(
-			'label' => esc_html__('Button: Popular Posts', 'infowazz'),
-			'section' => 'infowazz_header_top',
-			'type' => 'dropdown-pages',
-			'settings' => 'infowazz_theme_options[url_popular]',
-			'priority'   => 3,
-		));
-
-		// Hot Posts
-		$wp_customize->add_setting('infowazz_theme_options[url_hot]', array(
-			'capability' => 'edit_theme_options',
-			'type' => 'option',
-			'sanitize_callback' => 'esc_attr'
-		));
-		$wp_customize->add_control('infowazz_theme_options[url_hot]', array(
-			'label' => esc_html__('Button: Hot Posts', 'infowazz'),
-			'section' => 'infowazz_header_top',
-			'type' => 'dropdown-pages',
-			'settings' => 'infowazz_theme_options[url_hot]',
-			'priority'   => 4,
-		));
-
-		// Trending Posts
-		$wp_customize->add_setting('infowazz_theme_options[url_trending]', array(
-			'capability' => 'edit_theme_options',
-			'type' => 'option',
-			'sanitize_callback' => 'esc_attr'
-		));
-		$wp_customize->add_control('infowazz_theme_options[url_trending]', array(
-			'label' => esc_html__('Button: Trending Posts', 'infowazz'),
-			'section' => 'infowazz_header_top',
-			'type' => 'dropdown-pages',
-			'settings' => 'infowazz_theme_options[url_trending]',
-			'priority'   => 5,
-		));
-
-
-
-
-
-		$wp_customize->add_setting('infowazz_theme_options[header_link_url]', array(
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-        'sanitize_callback' => 'esc_url',
-		));
-		$wp_customize->add_control('infowazz_theme_options[header_link_url]', array(
-        'label'    	=> esc_html__('Header Button URL', 'infowazz'),
-				'description'        => 'Sample: http://www.yoururl.com',
-        'section'    => 'infowazz_header_top',
-        'settings'   => 'infowazz_theme_options[header_link_url]',
-    ));
-
-		$wp_customize->add_setting('infowazz_header_link_name', array(
-        'capability'     => 'edit_theme_options',
-				'default'        => 'Download infowazz',
-        'type'           => 'theme_mod',
-        'sanitize_callback' => 'esc_attr',
-		));
-		$wp_customize->add_control('infowazz_header_link_name', array(
-        'label'    	=> esc_html__('Header Button Name', 'infowazz'),
-        'section'    => 'infowazz_header_top',
-				'description'        => 'Default: Download infowazz',
-        'settings'   => 'infowazz_header_link_name',
-    ));
-
-
 
 }
 
