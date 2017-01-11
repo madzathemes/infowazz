@@ -24,8 +24,6 @@ function infowazz_register_required_plugins() {
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
-
-
         array(
             'name'			=> esc_html__( "Envato WordPress Toolkit","infowazz" ), // The plugin name
             'slug'			=> 'envato-wordpress-toolkit-master', // The plugin slug (typically the folder name)
@@ -53,7 +51,7 @@ function infowazz_register_required_plugins() {
             'slug'			=> 'magazine-plug', // The plugin slug (typically the folder name)
             'source'			=> get_template_directory() . '/all_plugins/magazine-plug.zip', // The plugin source
             'required'			=> true, // If false, the plugin is only 'recommended' instead of required
-            'version'			=> '2.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+            'version'			=> '2.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
             'force_activation'		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
             'force_deactivation'	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
             'external_url'		=> '', // If set, overrides default API URL and points to an external URL

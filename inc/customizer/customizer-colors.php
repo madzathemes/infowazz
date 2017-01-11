@@ -43,6 +43,8 @@ function infowazz_customize_colors($wp_customize){
     'panel'  => 'colors_settings'
   ));
 
+
+
   $wp_customize->add_setting('infowazz_theme_options[colors_default]', array(
       'capability'        => 'edit_theme_options',
       'type'           => 'option',
@@ -53,6 +55,23 @@ function infowazz_customize_colors($wp_customize){
       'section'  => 'general_style_settings',
       'settings' => 'infowazz_theme_options[colors_default]',
     )));
+
+    Kirki::add_field( 'mt_colors_default', array(
+      'type'        => 'multicolor',
+      'settings'    => 'mt_colors_default',
+      'label'       => esc_attr__( 'Site Color', 'infowazz' ),
+      'section'     => 'general_style_settings',
+      'option_type' => 'option',
+      'priority'    => 1,
+      'choices'     => array(
+          'color'    => esc_attr__( 'Color', 'infowazz' ),
+          'textinbackground'   => esc_attr__( 'Text If Background', 'infowazz' ),
+      ),
+      'default'     => array(
+          'color'    => '',
+          'textinbackground'    => '',
+      ),
+    ));
 
 
   $wp_customize->add_setting('infowazz_theme_options[colors_button]', array(
@@ -218,139 +237,47 @@ function infowazz_customize_colors($wp_customize){
     'panel'  => 'colors_settings'
   ));
 
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_background]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_background]', array(
-      'label'    => esc_html__('Top Footer Background', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_top_background]',
-  )));
 
+Kirki::add_field( 'mt_colors_footer_social', array(
+  'type'        => 'multicolor',
+  'settings'    => 'mt_colors_footer_social',
+  'label'       => esc_attr__( 'Footer Social Icons', 'infowazz' ),
+  'section'     => 'colors_footer',
+  'option_type' => 'option',
+  'choices'     => array(
+      'icon'    => esc_attr__( 'Icon', 'infowazz' ),
+      'hover'   => esc_attr__( 'Hover', 'infowazz' ),
+      'background'   => esc_attr__( 'Background', 'infowazz' ),
+      'background_hover'  => esc_attr__( 'Hover', 'infowazz' ),
+  ),
+  'default'     => array(
+      'icon'    => '',
+      'hover'    => '',
+      'background'    => '',
+      'background_hover'    => '',
+  ),
+));
 
+Kirki::add_field( 'mt_colors_footer_bottom', array(
+  'type'        => 'multicolor',
+  'settings'    => 'mt_colors_footer_bottom',
+  'label'       => esc_attr__( 'Footer Colors', 'infowazz' ),
+  'section'     => 'colors_footer',
+  'option_type' => 'option',
+  'choices'     => array(
+      'background'    => esc_attr__( 'Background', 'infowazz' ),
+      'text'   => esc_attr__( 'Text', 'infowazz' ),
+      'link'  => esc_attr__( 'Link', 'infowazz' ),
+      'hover'  => esc_attr__( 'Hover', 'infowazz' ),
+  ),
+  'default'     => array(
+      'background'    => '',
+      'text'    => '',
+      'link'    => '',
+      'hover'    => '',
+  ),
+));
 
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_link]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_link]', array(
-      'label'    => esc_html__('Top Footer Link', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_top_link]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_top_link_hover]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_top_link_hover]', array(
-      'label'    => esc_html__('Top Footer Link Hover', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_top_link_hover]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_border]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_border]', array(
-      'label'    => esc_html__('Footer Border', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_border]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_background]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_background]', array(
-      'label'    => esc_html__('Bottom Footer Background', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_bottom_background]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_text]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_text]', array(
-      'label'    => esc_html__('Bottom Footer Text', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_bottom_text]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_link]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_link]', array(
-      'label'    => esc_html__('Bottom Footer Link', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_bottom_link]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_bottom_link_hover]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_bottom_link_hover]', array(
-      'label'    => esc_html__('Bottom Footer Link Hover', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_bottom_link_hover]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_icon]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_icon]', array(
-      'label'    => esc_html__('Social Icon', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_social_icon]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_background]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_background]', array(
-      'label'    => esc_html__('Social Icon Background', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_social_background]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_icon_hover]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_icon_hover]', array(
-      'label'    => esc_html__('Social Icon Hover', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_social_icon_hover]',
-  )));
-
-  $wp_customize->add_setting('infowazz_theme_options[colors_footer_social_background_hover]', array(
-      'capability'        => 'edit_theme_options',
-      'type'           => 'option',
-      'sanitize_callback' => 'sanitize_hex_color',
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'infowazz_theme_options[colors_footer_social_background_hover]', array(
-      'label'    => esc_html__('Social Icon Hover Background', 'infowazz'),
-      'section'  => 'colors_footer',
-      'settings' => 'infowazz_theme_options[colors_footer_social_background_hover]',
-  )));
 
   // MENU COLORS //
   $wp_customize->add_section('colors_other', array(
