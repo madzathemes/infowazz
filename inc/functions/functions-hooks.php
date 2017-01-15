@@ -340,7 +340,6 @@ function infowazz_header_script() {
 
 		$option = get_option("infowazz_theme_options");
 
-		wp_enqueue_script( 'infowazz_defer', get_template_directory_uri(). '/inc/js/defer.js', array( 'jquery'), '', true );
 		wp_enqueue_script( 'infowazz_script', get_template_directory_uri(). '/inc/js/scripts.js', array( 'jquery'), '', true );
 		wp_localize_script( 'infowazz_script', 'ajax_posts', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'noposts' => esc_html__('No older posts found', 'infowazz'), ));
 

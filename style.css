@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.2
+  	Version: 1.4
     Theme Name: InfoWazz
     Theme URI: infowazz.tophot.wpengine.com
     Description: Magazine / Blog
@@ -777,6 +777,7 @@ table {
 /* Layouts */
 .mt-outer-wrap {
   overflow: hidden;
+  position: relative;
 }
 .mt-container-wrap {
   position: relative;
