@@ -41,9 +41,26 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
         <?php global $post; echo get_avatar( $post->post_author, 30 ); ?>
       </div>
       <div class="author-info">
-        <strong itemprop="author"><?php the_author_posts_link(); ?></strong>
-        <small class="color-silver-light" itemprop="datePublished"><?php the_date('M d, Y'); ?></small>
-        <span class="hide" itemprop="dateModified"><?php the_modified_date(); ?></span>
+        <div class="mt-author-soc hidden">
+          <?php $twitterHandle = get_the_author_meta('twitter');
+          $facebookHandle = get_the_author_meta('facebook');
+          $googleHandle = get_the_author_meta('gplus');
+          $instagramHandle = get_the_author_meta('instagram');
+          $linkedinHandle = get_the_author_meta('linkedin');
+          $pinterestHandle = get_the_author_meta('pinterest');
+          $youtubeHandle = get_the_author_meta('youtube');
+          $dribbbleHandle = get_the_author_meta('dribbble'); ?>
+          <?php if(!empty($twitterHandle)) { ?><a class="mt-bio-twitter" href="<?php echo $twitterHandle; ?>" alt="twitter"></a> <?php } ?>
+          <?php if(!empty($facebookHandle)) { ?><a class="mt-bio-facebook" href="<?php echo $facebookHandle; ?>" alt="facebook"></a> <?php } ?>
+          <?php if(!empty($googleHandle)) { ?><a class="mt-bio-google" href="<?php echo $googleHandle; ?>" alt="google plus"></a> <?php } ?>
+          <?php if(!empty($instagramHandle)) { ?><a class="mt-bio-instagram" href="<?php echo $instagramHandle; ?>" alt="instagram"></a> <?php } ?>
+          <?php if(!empty($linkedinHandle)) { ?><a class="mt-bio-linkedin" href="<?php echo $linkedinHandle; ?>" alt="linkedin"></a> <?php } ?>
+          <?php if(!empty($pinterestHandle)) { ?><a class="mt-bio-pinterest" href="<?php echo $pinterestHandle; ?>" alt="pinterest"></a> <?php } ?>
+          <?php if(!empty($youtubeHandle)) { ?><a class="mt-bio-youtube" href="<?php echo $youtubeHandle; ?>" alt="youtube"></a> <?php } ?>
+          <?php if(!empty($dribbbleHandle)) { ?><a class="mt-bio-dribbble" href="<?php echo $dribbbleHandle; ?>" alt="dribbble"></a> <?php } ?>
+        </div>
+        <strong><?php the_author_posts_link(); ?></strong>
+        <small class="color-silver-light"><?php the_date('M d, Y'); ?></small>
       </div>
     </div>
 
