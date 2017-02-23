@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.4
+  	Version: 1.7
     Theme Name: InfoWazz
     Theme URI: infowazz.tophot.wpengine.com
     Description: Magazine / Blog
@@ -5174,4 +5174,8 @@ li.mtc-buy {
 .page-template-default .theiaPostSlider_slides,
 .page-template-default .theiaPostSlider_slides > div {
   overflow: visible !important;
+}
+.footer-wrap .yarpp-related,
+.footer-wrap #toc_container{
+  display:none !important;
 }

@@ -118,11 +118,27 @@ add_filter('infowazz_top_content','infowazz_top_content');
 
 function infowazz_logo() {
 
-	$option = get_option("infowazz_theme_options"); ?>
+	$option = get_option("infowazz_theme_options");
 
-	<?php if(!empty($option['header_logo'])) { ?>
+	// Fix for SSL
+	if(!empty($option['header_logo'])) {
+		$header_logo = esc_url($option['header_logo']);
+		if(is_ssl() and 'http' == parse_url($header_logo, PHP_URL_SCHEME) ){
+				$header_logo = str_replace('http://', 'https://', $header_logo);
+		}
+	}
+	if(!empty($option['header_logox2'])) {
+		$header_logo2 = esc_url($option['header_logox2']);
+		if(is_ssl() and 'http' == parse_url($header_logo2, PHP_URL_SCHEME) ){
+				$header_logo2 = str_replace('http://', 'https://', $header_logo2);
+		}
+	}
+
+	if(!empty($option['header_logo'])) { ?>
 		<a class="logo"  href="<?php echo esc_url(home_url('/'));?>">
-			<img <?php if(!empty($option['logo_width'])) { ?>  width="<?php echo esc_attr($option['logo_width']); ?>" <?php } if(!empty($option['logo_height'])) { ?>  height="<?php echo esc_attr($option['logo_height']); ?>" <?php } ?> src="<?php echo esc_url($option['header_logo']); ?>" srcset="<?php echo esc_url($option['header_logo']); ?>, <?php if(!empty($option['header_logox2'])) { echo esc_url($option['header_logox2']); } ?> 2x"  alt="<?php echo the_title(); ?>"  />
+			<img <?php if(!empty($option['logo_width'])) { ?>  width="<?php echo esc_attr($option['logo_width']); ?>" <?php } if(!empty($option['logo_height'])) { ?>  height="<?php echo esc_attr($option['logo_height']); ?>" <?php } ?>
+			src="<?php echo esc_url($header_logo); ?>"
+			srcset="<?php echo esc_url($header_logo); ?>, <?php if(!empty($option['header_logox2'])) { echo esc_url($header_logo2); } ?> 2x"  alt="<?php echo the_title(); ?>"  />
 		</a>
 	<?php } else { ?>
 		<a class="logo"  href="<?php echo esc_url(home_url('/'));?>">
