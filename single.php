@@ -110,6 +110,4 @@ endwhile;
 </div>
 </article>
 
-</article>
-
 <?php get_footer(); ?>
