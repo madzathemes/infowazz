@@ -50,14 +50,14 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
           $pinterestHandle = get_the_author_meta('pinterest');
           $youtubeHandle = get_the_author_meta('youtube');
           $dribbbleHandle = get_the_author_meta('dribbble'); ?>
-          <?php if(!empty($twitterHandle)) { ?><a class="mt-bio-twitter" href="<?php echo $twitterHandle; ?>" alt="twitter"></a> <?php } ?>
-          <?php if(!empty($facebookHandle)) { ?><a class="mt-bio-facebook" href="<?php echo $facebookHandle; ?>" alt="facebook"></a> <?php } ?>
-          <?php if(!empty($googleHandle)) { ?><a class="mt-bio-google" href="<?php echo $googleHandle; ?>" alt="google plus"></a> <?php } ?>
-          <?php if(!empty($instagramHandle)) { ?><a class="mt-bio-instagram" href="<?php echo $instagramHandle; ?>" alt="instagram"></a> <?php } ?>
-          <?php if(!empty($linkedinHandle)) { ?><a class="mt-bio-linkedin" href="<?php echo $linkedinHandle; ?>" alt="linkedin"></a> <?php } ?>
-          <?php if(!empty($pinterestHandle)) { ?><a class="mt-bio-pinterest" href="<?php echo $pinterestHandle; ?>" alt="pinterest"></a> <?php } ?>
-          <?php if(!empty($youtubeHandle)) { ?><a class="mt-bio-youtube" href="<?php echo $youtubeHandle; ?>" alt="youtube"></a> <?php } ?>
-          <?php if(!empty($dribbbleHandle)) { ?><a class="mt-bio-dribbble" href="<?php echo $dribbbleHandle; ?>" alt="dribbble"></a> <?php } ?>
+          <?php if(!empty($twitterHandle)) { ?><a class="mt-bio-twitter" href="<?php echo $twitterHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($facebookHandle)) { ?><a class="mt-bio-facebook" href="<?php echo $facebookHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($googleHandle)) { ?><a class="mt-bio-google" href="<?php echo $googleHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($instagramHandle)) { ?><a class="mt-bio-instagram" href="<?php echo $instagramHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($linkedinHandle)) { ?><a class="mt-bio-linkedin" href="<?php echo $linkedinHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($pinterestHandle)) { ?><a class="mt-bio-pinterest" href="<?php echo $pinterestHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($youtubeHandle)) { ?><a class="mt-bio-youtube" href="<?php echo $youtubeHandle; ?>"></a> <?php } ?>
+          <?php if(!empty($dribbbleHandle)) { ?><a class="mt-bio-dribbble" href="<?php echo $dribbbleHandle; ?>"></a> <?php } ?>
         </div>
         <strong><?php the_author_posts_link(); ?></strong>
         <small class="color-silver-light"><?php the_date('M d, Y'); ?></small>
@@ -76,7 +76,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
     <?php if($share_top=="" or $share_top == "yes"){ ?>
     <ul class="share top">
       <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'infowazz'); ?></span></a></li>
-      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php the_title(); ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'infowazz'); ?></span></a></li>
+      <?php $input = get_the_title(); $title = str_replace( ' ', '+', $input ); ?>
+      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo $title; ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'infowazz'); ?></span></a></li>
       <li class="share-more">
         <div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
 
