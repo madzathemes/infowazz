@@ -2,6 +2,7 @@
 if ( ! function_exists( 'infowazz_posted_on' ) ) :
 
 function infowazz_posted_on() {
+	if ( false == get_theme_mod( 't_p_view_all_posts_by', false ) ) { $t_p_view_all_posts_by = esc_html__("View all posts by %s", "infowazz");  } else { $t_p_view_all_posts_by = get_theme_mod( 't_p_view_all_posts_by' ); $t_p_view_all_posts_by = $t_p_view_all_posts_by.' %s'; }
 	$infowazz_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
 	printf( wp_kses(__( '<span class="date_links">%2$s</span>', 'infowazz' ), $infowazz_allowed_html_array ),
 		'meta-prep meta-prep-author',
@@ -12,7 +13,7 @@ function infowazz_posted_on() {
 		),
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'infowazz' ), get_the_author() ),
+			sprintf( esc_attr($t_p_view_all_posts_by), get_the_author() ),
 			get_the_author()
 		)
 	);
@@ -52,13 +53,19 @@ endif;
 if ( ! function_exists( 'infowazz_comment' ) ) :
 
 function infowazz_comment( $comment, $args, $depth ) {
+	if ( false == get_theme_mod( 't_c_edit', false ) ) { $t_c_edit = esc_html__("Edit", "infowazz");  } else { $t_c_edit = get_theme_mod( 't_c_edit' ); }
+	if ( false == get_theme_mod( 't_c_reply', false ) ) { $t_c_reply = esc_html__("Reply", "infowazz");  } else { $t_c_reply = get_theme_mod( 't_c_reply' ); }
+	if ( false == get_theme_mod( 't_c_comment_awaiting_moteration', false ) ) { $t_c_comment_awaiting_moteration = esc_html__("Submit Comment", "infowazz");  } else { $t_c_comment_awaiting_moteration = get_theme_mod( 't_c_comment_awaiting_moteration' ); }
+	if ( false == get_theme_mod( 't_c_submit_comment', false ) ) { $t_c_submit_comment = esc_html__("Your comment is awaiting moderation.", "infowazz");  } else { $t_c_submit_comment = get_theme_mod( 't_c_submit_comment' ); }
+	if ( false == get_theme_mod( 't_c_pingback', false ) ) { $t_c_pingback = esc_html__("Pingback:", "infowazz");  } else { $t_c_pingback = get_theme_mod( 't_c_pingback' ); }
+	if ( false == get_theme_mod( 't_c_at', false ) ) { $t_c_at = esc_html__('%1$s at %2$s', 'infowazz');  } else { $t_c_at = get_theme_mod( 't_c_at' ); $t_c_at = '%1$s '.$t_c_at.' %2$s'; }
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php esc_html_e( 'Pingback:', 'infowazz' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'infowazz' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php echo esc_html($t_c_pingback); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html($t_c_edit), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -76,21 +83,21 @@ function infowazz_comment( $comment, $args, $depth ) {
 
 						/* translators: 1: comment author, 2: date and time */
 						printf( esc_html__( '%1$s %2$s', 'infowazz' ),
-							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
+							sprintf( '<h5 class="fn">%s</h5>', get_comment_author_link() ),
 							sprintf( '<a href="%1$s" class="mt_comment_date"> <time datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'Y-m-d' ),
 								/* translators: 1: date, 2: time */
-								sprintf( esc_html__( '%1$s at %2$s', 'infowazz' ), get_comment_date('Y-m-d' ), get_comment_time() )
+								sprintf( $t_c_at, get_comment_date('Y-m-d' ), get_comment_time() )
 							)
 						);
 					?>
-<?php edit_comment_link( esc_html__( ' Edit', 'infowazz' ), '<span class="edit-link">', '</span>' ); ?>
+
 
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'infowazz' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php echo esc_html($t_c_comment_awaiting_moteration); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -98,7 +105,8 @@ function infowazz_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content"><?php comment_text(); ?></div>
 			<div class="clear"></div>
-			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'infowazz' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html($t_c_reply), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			<?php edit_comment_link( esc_html($t_c_edit), '<span class="edit-link">', '</span>' ); ?>
 		</article><!-- #comment-## -->
 
 	<?php

@@ -5,6 +5,8 @@
 
 $image_settings = get_post_meta(get_the_ID(), "magazin_post_image", true);
 $options = get_option("infowazz_theme_options");
+if ( false == get_theme_mod( 't_p_pages', false ) ) { $t_p_pages = esc_html__("Pages:", "infowazz");  } else { $t_p_pages = get_theme_mod( 't_p_pages' ); }
+if ( false == get_theme_mod( 't_p_permalink_to', false ) ) { $t_p_permalink_to = esc_html__("Permalink to %s", "infowazz");  } else { $t_p_permalink_to = get_theme_mod( 't_p_permalink_to' ).' %s'; }
 
 if(is_single()) { $more = 1; }?>
 <article id="post-<?php the_ID(); ?>" class="<?php if ( is_sticky() and !is_single()){ ?> post_sticky <?php } ?>">
@@ -36,7 +38,7 @@ if(is_single()) { $more = 1; }?>
 	<?php if (!is_single()){ ?>
 		<header class="entry-header">
 			<h2 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to %s', 'infowazz' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php echo get_the_title();  ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html($t_p_permalink_to), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php echo get_the_title();  ?></a>
 			</h2>
 		</header>
 	<?php } ?>
@@ -61,7 +63,7 @@ if(is_single()) { $more = 1; }?>
 		}
 
 		?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'infowazz' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html($t_p_pages), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php } ?>
 

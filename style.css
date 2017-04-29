@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.7
+  	Version: 1.8
     Theme Name: InfoWazz
     Theme URI: infowazz.tophot.wpengine.com
     Description: Magazine / Blog
@@ -5178,6 +5178,10 @@ li.mtc-buy {
 .footer-wrap #toc_container{
   display:none !important;
 }
+.admin-bar .mt-header-mobile {
+  position: absolute;
+  width: 100%;
+}
 
 /* Updates */
 .mt-img-copyright {
@@ -5208,4 +5212,32 @@ li.mtc-buy {
   display: inline;
   float: left;
   font-weight: 900;
+}
+
+/* Megamenu UPDATE */
+.df-block-megamenu .tab-pane { display: none; }
+.df-block-megamenu .tab-pane.in { display: block; }
+.df-container-tab-content .mega-5 { width: 25%; }
+.df-subcat-stack { width: 20%!important; }
+.df-container-tab-content { width: 80%!important; }
+.nave.df-megamenu-nav-sub {
+  left: 0;
+  min-width: inherit;
+  position: relative;
+  width: auto;
+  padding: 20px !important;
+}
+.nave.df-megamenu-nav-sub a.mt-sub-cat-a {
+  padding: 3px 10px!important;
+  color: black!important;
+}
+.nave.df-megamenu-nav-sub .active a.mt-sub-cat-a {
+  background: #ff0036!important;
+  color: white!important;
+}
+.df-is-megamenu .df-megamenu-nav-sub li {
+  border: 0px solid silver !important;
+}
+.tab-pane .mega-post-wrap {
+  padding-bottom: 0px;
 }

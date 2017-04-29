@@ -63,21 +63,25 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
         <small class="color-silver-light"><?php the_date('M d, Y'); ?></small>
       </div>
     </div>
-
-    <?php if(class_exists('md_walker')) { ?>
+    <?php if ( false == get_theme_mod( 't_p_shares', false ) ) { $t_p_shares = esc_html__("Shares", "infowazz");  } else { $t_p_shares = get_theme_mod( 't_p_shares' ); } ?>
+    <?php if ( false == get_theme_mod( 't_p_views', false ) ) { $t_p_views = esc_html__("Views", "infowazz");  } else { $t_p_views = get_theme_mod( 't_p_views' ); } ?>
+    <?php if ( false == get_theme_mod( 't_c_comments', false ) ) { $t_c_comments = esc_html__("Comments", "infowazz");  } else { $t_c_comments = get_theme_mod( 't_c_comments' ); } ?>
+    <?php if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "infowazz");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); } ?>
+    <?php if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "infowazz");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); } ?>
+    <?php if(function_exists('mt_header_script')) { ?>
     <div class="post-statistic pull-left">
-      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html__('Shares', 'infowazz'); ?></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php echo esc_attr($viewes); ?> <?php echo esc_html__('Views', 'infowazz'); ?></span><?php } ?>
+      <?php if(!empty($shares)){ ?><span class="stat-shares"><?php echo esc_attr($shares); ?> <?php echo esc_html($t_p_shares); ?></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><?php echo esc_attr($viewes); ?> <?php echo esc_html($t_p_views); ?></span><?php } ?>
     </div>
     <?php } ?>
     <div class="single-stat-comments">
-      <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> Comments</span><?php } ?>
+      <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> <?php echo esc_html($t_c_comments); ?></span><?php } ?>
     </div>
-    <?php if($share_top=="" or $share_top == "yes"){ ?>
+      <?php if($share_top == "no"){} else if($share_top == "yes"){ ?>
     <ul class="share top">
-      <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'infowazz'); ?></span></a></li>
+      <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html($t_p_share_on_facebook); ?></span></a></li>
       <?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
-      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'infowazz'); ?></span></a></li>
+      <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html($t_p_share_on_twitter); ?></span></a></li>
       <li class="share-more">
         <div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
 
@@ -86,6 +90,19 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
 
       </li>
     </ul>
+    <?php } else if ( true == get_theme_mod( 'mt_post_top_share', true ) ) {  ?>
+      <ul class="share top">
+        <li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html($t_p_share_on_facebook); ?></span></a></li>
+        <?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
+        <li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html($t_p_share_on_twitter); ?></span></a></li>
+        <li class="share-more">
+          <div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
+
+          <a class="mt-radius" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink() ?>&media=<?php echo esc_url($url); ?>" target="_blank"><div class="pinterest mt-radius-b"></div></a>
+          <a class="mt-radius" href="https://plus.google.com/share?url=<?php the_permalink() ?>" target="_blank"><div class="google mt-radius-b"></div></a>
+
+        </li>
+      </ul>
     <?php } ?>
     <div class="clearfix"></div>
   </div>

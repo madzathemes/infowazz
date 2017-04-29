@@ -46,6 +46,15 @@ function hasScrolled() {
 jQuery(document).ready(function() {
   'use strict';
 
+  jQuery(".df-megamenu-nav-sub li a").on("hover", function() {
+    var tab_mega = jQuery(this).data( "target" );
+    jQuery(this).parent().parent().parent().parent().children(".df-container-tab-content").children(".tab-content").children(".tab-pane").removeClass("in");
+    jQuery(this).parent().parent().children("li").removeClass("active");
+    jQuery(tab_mega).addClass("in");
+    jQuery(this).parent().addClass("active");
+  });
+
+
   var head = (jQuery('.header-wrap').outerHeight());
   jQuery('.header-wrap-space').css({
       'height' : head + 'px'

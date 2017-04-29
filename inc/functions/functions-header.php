@@ -1,4 +1,6 @@
 <?php function infowazz_header() {
+if ( false == get_theme_mod( 't_o_followers', false ) ) { $t_o_followers = esc_html__("Followers", "infowazz");  } else { $t_o_followers = get_theme_mod( 't_o_followers' ); }
+if ( false == get_theme_mod( 't_p_to_search', false ) ) { $t_p_to_search = esc_html__("To search type and hit enter", "infowazz");  } else { $t_p_to_search = get_theme_mod( 't_p_to_search' ); }
 $allowed_html = array('ins' => array( 'class' => array(), 'style' => array(),'data-ad-client' => array(),'data-ad-slot' => array(),'data-ad-format' => array()), 'iframe' => array( 'id' => array(),'name' => array(),'src' => array(),'style' => array(),'scrolling' => array(),'frameborder' => array()), 'script' => array( 'async' => array(), 'type' => array(),'src' => array()), 'noscript' => array(), 'small' => array( 'class' => array()), 'img' => array( 'src' => array(), 'alt' => array(), 'class' => array(), 'width' => array(), 'height' => array() ), 'a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
 $option = get_option("infowazz_theme_options");
 $optioz = get_option("magazin_theme_options");
@@ -45,7 +47,7 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 							<?php if ( true == get_theme_mod( 'mt_top_follower', true ) ) { ?>
 							<div class="mt-top-followers pull-left mt-top-share">
-								<strong></strong> <span><?php esc_html_e( 'Followers', 'infowazz' ); ?></span>
+								<strong></strong> <span><?php echo esc_html($t_o_followers); ?></span>
 							</div>
 							<?php } ?>
 							<div class="pull-right mt-top-menu">
@@ -72,7 +74,7 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 						</div>
 
-						<div class="head-logo" <?php if(!empty($option['logo_width'])) { ?>  style="width:<?php echo esc_attr($option['logo_width']); ?>" <?php } ?>><?php infowazz_logo(); ?></div>
+						<div class="head-logo" <?php if(!empty($option['logo_width'])) { ?>  style="width:<?php echo esc_attr($option['logo_width']); ?>px" <?php } ?>><?php infowazz_logo(); ?></div>
 
 						<div class="nav mt-radius" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" >
 							<?php infowazz_nav(); ?>
@@ -83,7 +85,7 @@ else if(!empty($option['menu_background_width'])) {
 								<div class="nav-search pointer"></div>
 								<div class="nav-search-input mt-radius">
 									<form method="get" action="<?php echo esc_url(home_url('/')); ?>/">
-										<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'infowazz' ); ?>"  name="s" >
+										<input type="text" placeholder="<?php echo esc_html($t_p_to_search); ?>"  name="s" >
 									</form>
 								</div>
 							</div>
@@ -223,6 +225,8 @@ function infowazz_header_fixed() {
 			$viewes = $view;
 		}
 		$url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
+		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "infowazz");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
+		if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "infowazz");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
 		?>
 		<?php $option = get_option("infowazz_theme_options"); ?>
 				<div class="fixed-top">
@@ -231,9 +235,9 @@ function infowazz_header_fixed() {
 							<div class="col-md-12">
 
 								<ul class="share">
-									<li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'infowazz'); ?></span></a></li>
+									<li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html($t_p_share_on_facebook); ?></span></a></li>
 									<?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
-									<li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'infowazz'); ?></span></a></li>
+									<li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html($t_p_share_on_twitter); ?></span></a></li>
 									<li class="share-more">
 										<div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
 										<a class="mt-radius" href="https://plus.google.com/share?url=<?php the_permalink() ?>" target="_blank"><div class="google mt-radius-b"></div></a>
