@@ -5241,3 +5241,8 @@ li.mtc-buy {
 .tab-pane .mega-post-wrap {
   padding-bottom: 0px;
 }
+
+/* Ie Fix */
+.ie10 .fixed-top {
+  display: none!important
+}
