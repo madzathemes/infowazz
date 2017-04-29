@@ -5243,6 +5243,8 @@ li.mtc-buy {
 }
 
 /* Ie Fix */
-.ie10 .fixed-top {
-  display: none!important
+@media screen and (min-width:0\0) {
+  .fixed-top {
+    display: none!important
+  }
 }
