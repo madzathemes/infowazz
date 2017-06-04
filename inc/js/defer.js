@@ -121,7 +121,7 @@ jQuery(document).ready(function() {
     }
   });
   jQuery.ajax({
-    url: 'https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names='+twitter,
+    url: 'https://api.twitter.com/1/users/lookup.json?screen_name'+twitter,
     dataType: 'jsonp',
     type: 'GET',
     crossDomain : true,
