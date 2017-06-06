@@ -42,4 +42,4 @@ if(!empty($style)){
 
 <div class="mt-outer-wrap">
 
-<?php infowazz_header(); ?>
+<?php  infowazz_header(); ?>

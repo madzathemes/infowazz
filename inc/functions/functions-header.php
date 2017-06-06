@@ -47,7 +47,7 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 							<?php if ( true == get_theme_mod( 'mt_top_follower', true ) ) { ?>
 							<div class="mt-top-followers pull-left mt-top-share">
-								<strong></strong> <span><?php echo esc_html($t_o_followers); ?></span>
+								<strong><?php if ( shortcode_exists( 'posts_trending' ) ) { $f = do_shortcode('[scp code="facebook"]'); $t = do_shortcode('[scp code="twitter"]'); $y = do_shortcode('[scp code="youtube"]'); echo number_format($f+$t+$y); } ?></strong> <span><?php echo esc_html($t_o_followers); ?></span>
 							</div>
 							<?php } ?>
 							<div class="pull-right mt-top-menu">

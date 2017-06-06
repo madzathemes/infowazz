@@ -60,7 +60,7 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
           <?php if(!empty($dribbbleHandle)) { ?><a class="mt-bio-dribbble" href="<?php echo $dribbbleHandle; ?>"></a> <?php } ?>
         </div>
         <strong><?php the_author_posts_link(); ?></strong>
-        <small class="color-silver-light"><?php the_date('M d, Y'); ?></small>
+        <small class="color-silver-light"><?php echo get_the_date(); ?></small>
       </div>
     </div>
     <?php if ( false == get_theme_mod( 't_p_shares', false ) ) { $t_p_shares = esc_html__("Shares", "infowazz");  } else { $t_p_shares = get_theme_mod( 't_p_shares' ); } ?>
