@@ -1489,23 +1489,20 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   width: 100%;
   z-index: -1;
   background: white;
-  transform: translate(0,-130px);
-  -webkit-transform: translate(0,-130px); /** Safari & Chrome **/
-  -o-transform: translate(0,-130px); /** Opera **/
-  -moz-transform: translate(0,-130px); /** Firefox **/
+  margin-top: -130px;
 }
 .fixed-on .fixed-top {
-  transform: translate(0,0);
-  -webkit-transform: translate(0,0); /** Safari & Chrome **/
-  -o-transform: translate(0,0); /** Opera **/
-  -moz-transform: translate(0,0); /** Firefox **/
+  transform: translate(0,130px);
+  -webkit-transform: translate(0,130px); /** Safari & Chrome **/
+  -o-transform: translate(0,130px); /** Opera **/
+  -moz-transform: translate(0,130px); /** Firefox **/
 }
 .mt-fixed-up.nav-down.fixed-on .fixed-top,
 .mt-fixed-always.fixed-on .fixed-top  {
-  transform: translate(0,0px);
-  -webkit-transform: translate(0,0px); /** Safari & Chrome **/
-  -o-transform: translate(0,0px); /** Opera **/
-  -moz-transform: translate(0,0px); /** Firefox **/
+  transform: translate(0,130px);
+  -webkit-transform: translate(0,130px); /** Safari & Chrome **/
+  -o-transform: translate(0,130px); /** Opera **/
+  -moz-transform: translate(0,130px); /** Firefox **/
 }
 .fixed-top .share  {
   margin-bottom: 0px;
@@ -4409,11 +4406,7 @@ ul.page-numbers li {
   width: 100%;
   position: fixed;
   z-index: 99999;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  -moz-transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate3d(-100%, 0, 0);
-  -o-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
+  margin: 0 0 0 -400px;
   -webkit-transition: transform .2s ease;
   -moz-transition: transform .2s ease;
   -o-transition: transform .2s ease;
@@ -4478,11 +4471,11 @@ ul.page-numbers li {
   padding: 7px;
 }
 .mobile-menu-active .mt-smart-menu {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(400px, 0, 0);
+  -moz-transform: translate3d(400px, 0, 0);
+  -ms-transform: translate3d(400px, 0, 0);
+  -o-transform: translate3d(400px, 0, 0);
+  transform: translate3d(400px, 0, 0);
 }
 .mt-smart-menu {
     display: block!important;

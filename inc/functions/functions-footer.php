@@ -34,7 +34,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 footer-copyright">
-              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2017. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
             </div>
               <div class="col-md-6">
                 <?php wp_nav_menu( array('theme_location'  => "footer_menu", 'container' =>false, 'fallback_cb' => false, 'menu_class' => 'footer-nav', 'menu_id' => '','echo' => true, 'before' => '','after' => '', 'link_before' => '','link_after' => '', 'depth' => 1));  ?>
@@ -86,7 +86,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 footer-copyright">
-              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2017. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
             </div>
               <div class="col-md-6">
                 <div class="head-nav">
@@ -150,7 +150,7 @@ function infowazz_footer_3() {?>
         <div class="container">
           <div class="row">
             <div class="col-md-6 footer-copyright">
-              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+              <p><?php echo html_entity_decode(get_theme_mod('infowazz_copyright_text', 'Copyright 2017. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
             </div>
               <div class="col-md-6">
                 <?php wp_nav_menu( array('theme_location'  => "footer_menu", 'container' =>false, 'fallback_cb' => false, 'menu_class' => 'footer-nav', 'menu_id' => '','echo' => true, 'before' => '','after' => '', 'link_before' => '','link_after' => '', 'depth' => 1));  ?>

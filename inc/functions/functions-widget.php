@@ -92,6 +92,21 @@ $mt_columns = get_option("infowazz_theme_options");
 				'after_title' => '</span></h4>',
 	) );
 
+	/* --------------------------------------------------------------------------------------- Mobile Menu Widgets */
+
+	register_sidebar( array(
+		'name' => esc_html__( 'Mobile Menu Widgets', 'infowazz'),
+		'id' => 'mobile-menu-widget-area',
+		'description' => esc_html__( 'The Mobile Menu Widget area' , 'infowazz'),
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '<div class="clear"></div></div>',
+				'before_title' => '<h2 class="heading"><span>',
+				'after_title' => '</span></h4>',
+	) );
+
+
+
+
 
 }
 
