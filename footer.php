@@ -1,8 +1,8 @@
 <div class="footer-wrap" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 		<?php $optionz = get_option("magazin_theme_options");
-		if (!empty($optionz['article_ad_bottom'])) {  ?>
+		if (!empty($optionz['footer_ad_top'])) {  ?>
 			<div class="advertise text-center">
-				<?php echo do_shortcode(html_entity_decode($optionz['article_ad_bottom'])); ?>
+				<?php echo do_shortcode(html_entity_decode($optionz['footer_ad_top'])); ?>
 			</div>
 		<?php } ?>
 	<?php $option = get_option("infowazz_theme_options"); ?>

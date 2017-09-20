@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 2.0
+  	Version: 2.1
     Theme Name: InfoWazz
     Theme URI: infowazz.tophot.wpengine.com
     Description: Magazine / Blog
@@ -8,7 +8,7 @@
     Author URI: https://themeforest.net/user/madza
     License: GNU General Public License version 3.0
     License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Author Madars Bitenieks for https://magazine-themes.net/
+	Author Madars Bitenieks for https://themeforest.net/user/madza
     All files, unless otherwise stated, are released under the GNU General Public License
     version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
     Text Domain: infowazz
@@ -3416,14 +3416,11 @@ opacity: 0.7
   padding: 1px 0px;
 }
 .comment-reply-link {
-  right: 0px;
-  bottom: 0px;
-  background: #ecedf1;
-  padding: 5px 5px 3px 10px;
-  color: #222;
-  font-size: 12px;
-  text-transform: uppercase;
-  position: absolute;
+  padding: 5px 0px 3px 0px;
+  color: #222222;
+  font-size: 11px;
+  margin-left: 65px;
+  font-weight: bold;
 }
 .comment-author .fn {
   font-size: 16px;
@@ -3962,9 +3959,6 @@ opacity: 0.7
   }
   .mt_comment_i_1 {
     padding-right: 20px;
-  }
-  .panel-grid-cell {
-    width: 100% !important;
   }
   .post-gallery-nav .slick-arrow {
     display: none!important;
@@ -5256,4 +5250,16 @@ li.mtc-buy {
   .fixed-top {
     display: none!important
   }
+}
+
+.entry-content:before {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+.entry-content:after {
+  clear: both;
+  content: "";
+  display: table;
+  table-layout: fixed;
 }
