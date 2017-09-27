@@ -1497,7 +1497,12 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   -o-transform: translate(0,130px); /** Opera **/
   -moz-transform: translate(0,130px); /** Firefox **/
 }
-.mt-fixed-up.nav-down.fixed-on .fixed-top,
+.mt-fixed-up.nav-down.fixed-on .fixed-top {
+  transform: translate(0,130px);
+  -webkit-transform: translate(0,130px); /** Safari & Chrome **/
+  -o-transform: translate(0,130px); /** Opera **/
+  -moz-transform: translate(0,130px); /** Firefox **/
+}
 .mt-fixed-always.fixed-on .fixed-top  {
   transform: translate(0,130px);
   -webkit-transform: translate(0,130px); /** Safari & Chrome **/
