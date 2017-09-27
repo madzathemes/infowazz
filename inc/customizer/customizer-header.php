@@ -11,19 +11,7 @@ function infowazz_customize_header($wp_customize){
 
 
 
-	Kirki::add_field( 'infowazz_theme_options[boxed]', array(
-		'type'        => 'radio-image',
-		'settings'    => 'infowazz_theme_options[boxed]',
-		'label'       => esc_html__( 'Page Layouts', 'infowazz' ),
-		'section'     => 'general_style_settings',
-		'default'     => '2',
-		'option_type' => 'option',
-		'priority'    => 10,
-		'choices'     => array(
-				'1'   => get_template_directory_uri() . '/inc/img/boxed.png',
-				'2' => get_template_directory_uri() . '/inc/img/full.png',
-			 ),
-	));
+
 
 	$wp_customize->add_section('infowazz_header', array(
         'title'    	=> esc_html__('Header', 'infowazz'),
@@ -90,51 +78,7 @@ function infowazz_customize_header($wp_customize){
         'settings' => 'infowazz_theme_options[header_logox2]',
     )));
 
-    Kirki::add_field( 'infowazz_theme_options[mobile_logo]', array(
-      'type'        => 'image',
-      'settings'    => 'infowazz_theme_options[mobile_logo]',
-      'label'       => esc_html__( 'Mobile Logo', 'infowazz' ),
-      'section'     => 'infowazz_logo',
-      'default'     => '',
-      'option_type' => 'option',
-      'priority'    => 10,
-    ) );
 
-    //  =============================
-    //  = Logo Widht
-    //  =============================
-
-    Kirki::add_field( 'infowazz_theme_options[logo_width]', array(
-    'type'        => 'number',
-    'settings'    => 'infowazz_theme_options[logo_width]',
-    'label'       => esc_attr__( 'Width', 'infowazz' ),
-    'section'     => 'infowazz_logo_settings',
-    'default'     => 176,
-    'option_type' => 'option',
-    'choices'     => array(
-      'min'  => 20,
-      'max'  => 500,
-      'step' => 1,
-    ),
-  ) );
-
-    //  =============================
-    //  = Logo Height
-    //  =============================
-
-    Kirki::add_field( 'infowazz_theme_options[logo_height]', array(
-    'type'        => 'number',
-    'settings'    => 'infowazz_theme_options[logo_height]',
-    'label'       => esc_attr__( 'Height', 'infowazz' ),
-    'section'     => 'infowazz_logo_settings',
-    'default'     => 40,
-    'option_type' => 'option',
-    'choices'     => array(
-      'min'  => 20,
-      'max'  => 200,
-      'step' => 1,
-    ),
-  ) );
 
 /*  Kirki::add_field( 'mt_space_logo', array(
   	'type'        => 'spacing',
@@ -165,36 +109,7 @@ function infowazz_customize_header($wp_customize){
     //  =============================
 
 
-    Kirki::add_field( 'infowazz_theme_options[logo_top]', array(
-  	'type'        => 'number',
-  	'settings'    => 'infowazz_theme_options[logo_top]',
-  	'label'       => esc_attr__( 'Top Space', 'infowazz' ),
-  	'section'     => 'infowazz_logo_settings',
-  	'default'     => 18,
-    'option_type' => 'option',
-  	'choices'     => array(
-  		'min'  => 0,
-  		'max'  => 120,
-  		'step' => 1,
-  	),
-  ) );
 
-    //  =============================
-    //  = Logo margin Bottom
-    //  =============================
-    Kirki::add_field( 'infowazz_theme_options[logo_bottom]', array(
-  	'type'        => 'number',
-  	'settings'    => 'infowazz_theme_options[logo_bottom]',
-  	'label'       => esc_attr__( 'Top Space', 'infowazz' ),
-  	'section'     => 'infowazz_logo_settings',
-  	'default'     => 18,
-    'option_type' => 'option',
-  	'choices'     => array(
-  		'min'  => 0,
-  		'max'  => 120,
-  		'step' => 1,
-  	),
-  ) );
 
     //  =============================
     //  = Logo Height fixed
@@ -509,63 +424,147 @@ function infowazz_customize_header($wp_customize){
     ));
 
 
-   Kirki::add_field( 'mt_menu_small_on', array(
-     	'type'        => 'switch',
-     	'settings'    => 'mt_menu_small_on',
-     	'label'       => esc_attr__( 'Small Menu For Desktop', 'infowazz' ),
-     	'section'     => 'infowazz_header_top',
-     	'default'     => 'on',
-     	'priority'    => 10,
-     	'choices'     => array(
-     		'on'  => esc_attr__( 'On', 'infowazz' ),
-     		'off' => esc_attr__( 'Off', 'infowazz' ),
-     	),
-   ) );
+
+
+}
+
+add_action('customize_register', 'infowazz_customize_header');
+
+Kirki::add_field( 'infowazz_theme_options[boxed]', array(
+  'type'        => 'radio-image',
+  'settings'    => 'infowazz_theme_options[boxed]',
+  'label'       => esc_html__( 'Page Layouts', 'infowazz' ),
+  'section'     => 'general_style_settings',
+  'default'     => '2',
+  'option_type' => 'option',
+  'priority'    => 10,
+  'choices'     => array(
+      '1'   => get_template_directory_uri() . '/inc/img/boxed.png',
+      '2' => get_template_directory_uri() . '/inc/img/full.png',
+     ),
+));
+
+Kirki::add_field( 'infowazz_theme_options[mobile_logo]', array(
+  'type'        => 'image',
+  'settings'    => 'infowazz_theme_options[mobile_logo]',
+  'label'       => esc_html__( 'Mobile Logo', 'infowazz' ),
+  'section'     => 'infowazz_logo',
+  'default'     => '',
+  'option_type' => 'option',
+  'priority'    => 10,
+) );
+
+//  =============================
+//  = Logo Widht
+//  =============================
+
+Kirki::add_field( 'infowazz_theme_options[logo_width]', array(
+'type'        => 'number',
+'settings'    => 'infowazz_theme_options[logo_width]',
+'label'       => esc_attr__( 'Width', 'infowazz' ),
+'section'     => 'infowazz_logo_settings',
+'default'     => 176,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 20,
+  'max'  => 500,
+  'step' => 1,
+),
+) );
+
+//  =============================
+//  = Logo Height
+//  =============================
+
+Kirki::add_field( 'infowazz_theme_options[logo_height]', array(
+'type'        => 'number',
+'settings'    => 'infowazz_theme_options[logo_height]',
+'label'       => esc_attr__( 'Height', 'infowazz' ),
+'section'     => 'infowazz_logo_settings',
+'default'     => 40,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 20,
+  'max'  => 200,
+  'step' => 1,
+),
+) );
+
+Kirki::add_field( 'infowazz_theme_options[logo_top]', array(
+'type'        => 'number',
+'settings'    => 'infowazz_theme_options[logo_top]',
+'label'       => esc_attr__( 'Top Space', 'infowazz' ),
+'section'     => 'infowazz_logo_settings',
+'default'     => 18,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 0,
+  'max'  => 120,
+  'step' => 1,
+),
+) );
+
+//  =============================
+//  = Logo margin Bottom
+//  =============================
+Kirki::add_field( 'infowazz_theme_options[logo_bottom]', array(
+'type'        => 'number',
+'settings'    => 'infowazz_theme_options[logo_bottom]',
+'label'       => esc_attr__( 'Top Space', 'infowazz' ),
+'section'     => 'infowazz_logo_settings',
+'default'     => 18,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 0,
+  'max'  => 120,
+  'step' => 1,
+),
+) );
+
+Kirki::add_field( 'mt_menu_small_on', array(
+   'type'        => 'switch',
+   'settings'    => 'mt_menu_small_on',
+   'label'       => esc_attr__( 'Small Menu For Desktop', 'infowazz' ),
+   'section'     => 'infowazz_header_top',
+   'default'     => 'on',
+   'priority'    => 10,
+   'choices'     => array(
+     'on'  => esc_attr__( 'On', 'infowazz' ),
+     'off' => esc_attr__( 'Off', 'infowazz' ),
+   ),
+) );
 
 
 
-   Kirki::add_field( 'mt_menu_search', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_menu_search',
-       'label'       => esc_attr__( 'Search Button', 'infowazz' ),
-       'section'     => 'infowazz_header_top',
-       'default'     => 'on',
-       'priority'    => 10,
-       'choices'     => array(
-      		'on'  => esc_attr__( 'On', 'infowazz' ),
-      		'off' => esc_attr__( 'Off', 'infowazz' ),
-      	),
-   ) );
-
-   Kirki::add_field( 'mt_header_top', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_header_top',
-       'label'       => esc_attr__( 'Header Top', 'infowazz' ),
-       'section'     => 'infowazz_header_top',
-       'default'     => 'on',
-      	'priority'    => 10,
-      	'choices'     => array(
-      		'on'  => esc_attr__( 'On', 'infowazz' ),
-      		'off' => esc_attr__( 'Off', 'infowazz' ),
-      	),
-   ) );
-   Kirki::add_field( 'mt_top_follower', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_top_follower',
-       'label'       => esc_attr__( 'Header Top Follower Count', 'infowazz' ),
-       'section'     => 'infowazz_header_top',
-       'default'     => 'on',
-       'priority'    => 10,
-       'choices'     => array(
-         'on'  => esc_attr__( 'On', 'infowazz' ),
-         'off' => esc_attr__( 'Off', 'infowazz' ),
-       ),
-   ) );
-
-   Kirki::add_field( 'mt_menu_share', array(
+Kirki::add_field( 'mt_menu_search', array(
     'type'        => 'switch',
-    'settings'    => 'mt_menu_share',
-    'label'       => esc_attr__( 'Fixed Share Buttons', 'infowazz' ),
+    'settings'    => 'mt_menu_search',
+    'label'       => esc_attr__( 'Search Button', 'infowazz' ),
+    'section'     => 'infowazz_header_top',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => array(
+       'on'  => esc_attr__( 'On', 'infowazz' ),
+       'off' => esc_attr__( 'Off', 'infowazz' ),
+     ),
+) );
+
+Kirki::add_field( 'mt_header_top', array(
+    'type'        => 'switch',
+    'settings'    => 'mt_header_top',
+    'label'       => esc_attr__( 'Header Top', 'infowazz' ),
+    'section'     => 'infowazz_header_top',
+    'default'     => 'on',
+     'priority'    => 10,
+     'choices'     => array(
+       'on'  => esc_attr__( 'On', 'infowazz' ),
+       'off' => esc_attr__( 'Off', 'infowazz' ),
+     ),
+) );
+Kirki::add_field( 'mt_top_follower', array(
+    'type'        => 'switch',
+    'settings'    => 'mt_top_follower',
+    'label'       => esc_attr__( 'Header Top Follower Count', 'infowazz' ),
     'section'     => 'infowazz_header_top',
     'default'     => 'on',
     'priority'    => 10,
@@ -573,26 +572,35 @@ function infowazz_customize_header($wp_customize){
       'on'  => esc_attr__( 'On', 'infowazz' ),
       'off' => esc_attr__( 'Off', 'infowazz' ),
     ),
-    ));
+) );
 
-    Kirki::add_field( 'infowazz_theme_options[menu_fixed]', array(
-     'type'        => 'select',
-     'settings'    => 'infowazz_theme_options[menu_fixed]',
-     'label'       => esc_attr__( 'Fixed Header', 'infowazz' ),
-     'section'     => 'infowazz_header_top',
-     'default'     => 'mt-fixed-up',
-     'option_type' => 'option',
-     'priority'    => 10,
-     'multiple'    => 1,
-     'choices'     => array(
-       'mt-fixed-up' => esc_attr__( 'Show When Scroll Up', 'infowazz' ),
-       'mt-fixed-always' => esc_attr__( 'Show Always', 'infowazz' ),
-       'mt-fixed-disabled' => esc_attr__( 'Disable', 'infowazz' ),
-     ),
-     ));
+Kirki::add_field( 'mt_menu_share', array(
+ 'type'        => 'switch',
+ 'settings'    => 'mt_menu_share',
+ 'label'       => esc_attr__( 'Fixed Share Buttons', 'infowazz' ),
+ 'section'     => 'infowazz_header_top',
+ 'default'     => 'on',
+ 'priority'    => 10,
+ 'choices'     => array(
+   'on'  => esc_attr__( 'On', 'infowazz' ),
+   'off' => esc_attr__( 'Off', 'infowazz' ),
+ ),
+ ));
 
-}
-
-add_action('customize_register', 'infowazz_customize_header');
+ Kirki::add_field( 'infowazz_theme_options[menu_fixed]', array(
+  'type'        => 'select',
+  'settings'    => 'infowazz_theme_options[menu_fixed]',
+  'label'       => esc_attr__( 'Fixed Header', 'infowazz' ),
+  'section'     => 'infowazz_header_top',
+  'default'     => 'mt-fixed-up',
+  'option_type' => 'option',
+  'priority'    => 10,
+  'multiple'    => 1,
+  'choices'     => array(
+    'mt-fixed-up' => esc_attr__( 'Show When Scroll Up', 'infowazz' ),
+    'mt-fixed-always' => esc_attr__( 'Show Always', 'infowazz' ),
+    'mt-fixed-disabled' => esc_attr__( 'Disable', 'infowazz' ),
+  ),
+  ));
 
 ?>

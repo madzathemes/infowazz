@@ -1499,10 +1499,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-down.fixed-on .fixed-top,
 .mt-fixed-always.fixed-on .fixed-top  {
-  transform: translate(0,0px);
-  -webkit-transform: translate(0,0px); /** Safari & Chrome **/
-  -o-transform: translate(0,0px); /** Opera **/
-  -moz-transform: translate(0,0px); /** Firefox **/
+  transform: translate(0,130px);
+  -webkit-transform: translate(0,130px); /** Safari & Chrome **/
+  -o-transform: translate(0,130px); /** Opera **/
+  -moz-transform: translate(0,130px); /** Firefox **/
 }
 .fixed-top .share  {
   margin-bottom: 0px;
@@ -2781,7 +2781,7 @@ opacity: 0.7
 }
 .single-media-title h1 {
   color: white;
-  font-weight: 900;
+  font-weight: 700;
 }
 .single-media-title .single-cat-wrap .post-categories li a {
   padding: 3px 5px;
